@@ -1,0 +1,29 @@
+﻿body {
+}
+
+h1 {
+    color: blue;
+}
+
+/*.debug-layout-12-grid-blue{
+    background-color:lightblue;
+    position:fixed;
+    z-index:-1;
+    height:100%;
+    width:8.33%;
+}
+
+.debug-layout-12-grid-green{
+    background-color:lightgreen;
+    position:fixed;
+    margin-left:8.33%;
+    z-index:-1;
+    height:100%;
+    width:8.33%;
+}*/
+
+.column-reference{
+    text-align:center;
+    background-color:lightgreen;
+    height:50px;
+}
