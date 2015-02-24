@@ -110,7 +110,9 @@
     <Content Include="Global.asax" />
     <Content Include="Images\CanyonlandsForWebsite.jpg" />
     <Content Include="Images\pattern-grid%401x.jpg" />
+    <Content Include="Images\SkylineForWebsite.jpg" />
     <Content Include="Index.html" />
+    <Content Include="JS\NavBar.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -139,7 +141,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="JS\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
