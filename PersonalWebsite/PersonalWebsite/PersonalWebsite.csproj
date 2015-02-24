@@ -104,8 +104,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\MainPage.css" />
+    <Content Include="CSS\SkillsStyles.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\CanyonlandsForWebsite.jpg" />
+    <Content Include="Images\pattern-grid%401x.jpg" />
     <Content Include="Index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
