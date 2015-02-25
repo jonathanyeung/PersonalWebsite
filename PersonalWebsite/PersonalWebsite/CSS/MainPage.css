@@ -31,25 +31,6 @@ header {
         vertical-align: middle;
     }
 
-#headerName {
-    font-size: 60px;
-}
-
-#headerSubtext {
-    font-size: 20px;
-    margin-bottom:100px;
-}
-
-#cover-image-content {
-    position: absolute;
-    top: 160px;
-    width: 800px;
-    margin-left: -400px;
-    left: 50%;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-}
-
 #navlist {
     text-align: center;
 }
@@ -69,6 +50,27 @@ header {
             -moz-border-radius: 5px;
         }
 
+#headerName {
+    font-size: 60px;
+}
+
+#headerSubtext {
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+#cover-image-content {
+    position: absolute;
+    top: 160px;
+    width: 800px;
+    margin-left: -400px;
+    left: 50%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+
+
 .section-Titles {
     margin-top: 50px;
 }
@@ -77,6 +79,7 @@ header {
     text-align: center;
 }
 
+/*Used to darken a background image to de-emphasize it.*/
 .darken-image-overlay {
     width: 100%;
     height: 100%;
