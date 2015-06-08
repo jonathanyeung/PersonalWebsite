@@ -105,12 +105,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\ExperienceStyles.css" />
     <Content Include="CSS\MainPage.css" />
+    <Content Include="CSS\ProjectsStyles.css" />
     <Content Include="CSS\SkillsStyles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\462x120_WP_Store_cyan.png" />
     <Content Include="Images\CanyonlandsForWebsite.jpg" />
+    <Content Include="Images\GitHub-Mark-Light-120px-plus.png" />
+    <Content Include="Images\GitHub_Logo.png" />
+    <Content Include="Images\GuruAlphaWithChassis.png" />
     <Content Include="Images\pattern-grid%401x.jpg" />
+    <Content Include="Images\PointReaderScreenshot.png" />
+    <Content Include="Images\PointReaderWithChassis.png" />
     <Content Include="Images\SkylineForWebsite.jpg" />
+    <Content Include="Images\Tablet_Ozwego_left_angle_1.png" />
     <Content Include="Index.html" />
     <Content Include="JS\Main.js" />
     <Content Include="JS\NavBar.js" />
@@ -180,9 +189,9 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.14-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.14-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets'))" />
+    <!--<Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.14-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.14-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.0.13.0-build22724\build\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.0.13.0-build22724\build\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.14-beta\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.14-beta\build\Microsoft.Diagnostics.Tracing.EventRegister.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.14-beta\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.14-beta\build\Microsoft.Diagnostics.Tracing.EventRegister.targets'))" />-->
     <!--<Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />-->
   </Target>
   <Import Project="..\packages\Microsoft.ApplicationInsights.0.13.2-build00132\tools\net40\Microsoft.ApplicationInsights.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.0.13.2-build00132\tools\net40\Microsoft.ApplicationInsights.targets')" />

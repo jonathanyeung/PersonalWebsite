@@ -1,0 +1,94 @@
+﻿/*#timelineContainer {
+    border: medium;
+    border-color: mintcream;
+    background-color: mintcream;
+}*/
+
+.rectangle {
+    width: 10px;
+    height: 1500px;
+    background-color: black;
+    margin-left: 200px;
+}
+
+#triangle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 20px solid red;
+    border-top-color: green;
+    padding-top: 10px;
+    clear: both;
+}
+
+.timelineEntry {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.timelineEntryHeading {
+    font-size: large;
+    color: black;
+}
+
+.timelineEntryDate {
+    font-size: small;
+    color: black;
+    opacity: .5;
+}
+
+.timelineDescription {
+    float: left;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+.timelineDescriptionHeader {
+    font-size: x-large;
+}
+
+.timelineDescriptionSubheader {
+    font-size: small;
+    opacity: .7;
+}
+
+.timelineDescriptionContent {
+}
+
+.eventCircle {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: -5px; /*eventCircle radius - rectangleWidth / 2 */
+    margin-top: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    background-color: black;
+    box-shadow: 0px 0px 0px 4px mintcream;
+}
+
+.eventRectangle {
+    float: left;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: black;
+    box-shadow: 0px 0px 0px 4px mintcream;
+    margin-left: 130px;
+    display: table;
+}
+
+.eventRectangleText {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}

@@ -1,6 +1,13 @@
 ﻿body {
 }
 
+.hatch-background{
+    background-image:url(../Images/pattern-grid@1x.jpg);
+    background-repeat:repeat;
+    background-color:red;
+    background-size:18px 18px;
+}
+
 .column-reference {
     text-align: center;
     background-color: lightgreen;
@@ -18,17 +25,18 @@ header {
     opacity: .6;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
-    transition: all 0.4s ease;
     z-index: 100;
+
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
 }
 
     header.sticky {
-        font-size: 24px;
         line-height: 68px;
         height: 68px;
-        font-size: 26px;
-        background: gray;
-        vertical-align: middle;
+        font-size: 18px;
+        opacity:.8;
     }
 
 #navlist {
@@ -40,14 +48,15 @@ header {
         display: inline;
         list-style-type: none;
         padding: 20px;
-        transition: all .6s ease;
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
     }
 
         #navlist li.emphasized {
-            background-color: #335C7D;
-            border-radius: 5px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
+            color:#335C7D;
+            font-weight:bold;
+            font-size:20px;
         }
 
 #headerName {
@@ -73,6 +82,10 @@ header {
 
 .section-Titles {
     margin-top: 50px;
+}
+
+.section-Subtitles{
+
 }
 
 .section-content {
