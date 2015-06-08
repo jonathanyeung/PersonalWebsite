@@ -1,0 +1,112 @@
+﻿body {
+}
+
+.hatch-background{
+    background-image:url(../Images/pattern-grid@1x.jpg);
+    background-repeat:repeat;
+    background-color:red;
+    background-size:18px 18px;
+}
+
+.column-reference {
+    text-align: center;
+    background-color: lightgreen;
+    height: 50px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 108px;
+    height: 108px;
+    background: black;
+    opacity: .6;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 100;
+
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+
+    header.sticky {
+        line-height: 68px;
+        height: 68px;
+        font-size: 18px;
+        opacity:.8;
+    }
+
+#navlist {
+    text-align: center;
+}
+
+
+    #navlist li {
+        display: inline;
+        list-style-type: none;
+        padding: 20px;
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+    }
+
+        #navlist li.emphasized {
+            color:#335C7D;
+            font-weight:bold;
+            font-size:20px;
+        }
+
+#headerName {
+    font-size: 60px;
+}
+
+#headerSubtext {
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+#cover-image-content {
+    position: absolute;
+    top: 160px;
+    width: 800px;
+    margin-left: -400px;
+    left: 50%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+
+
+.section-Titles {
+    margin-top: 50px;
+}
+
+.section-Subtitles{
+
+}
+
+.section-content {
+    text-align: center;
+}
+
+/*Used to darken a background image to de-emphasize it.*/
+.darken-image-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+
+.accent-button {
+    color: white;
+    background-color: #4bc8de;
+    border-width: 0px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 20px 10px 20px;
+}
