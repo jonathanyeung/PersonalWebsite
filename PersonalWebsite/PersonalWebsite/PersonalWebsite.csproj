@@ -117,6 +117,8 @@
     <Content Include="Images\Contact\In-2C-54px-TM.png" />
     <Content Include="Images\Contact\no_mail.png" />
     <Content Include="Images\Contact\TwitterLogo.png" />
+    <Content Include="Images\Experience\caltech-logo.jpg" />
+    <Content Include="Images\Experience\microsoft_logo.svg" />
     <Content Include="Images\GitHub-Mark-Light-120px-plus.png" />
     <Content Include="Images\GitHub_Logo.png" />
     <Content Include="Images\GuruAlphaWithChassis.png" />
