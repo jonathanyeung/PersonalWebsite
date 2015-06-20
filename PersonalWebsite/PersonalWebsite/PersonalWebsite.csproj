@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\ContactStyles.css" />
     <Content Include="CSS\ExperienceStyles.css" />
     <Content Include="CSS\MainPage.css" />
     <Content Include="CSS\ProjectsStyles.css" />
@@ -112,12 +113,21 @@
     <Content Include="Global.asax" />
     <Content Include="Images\462x120_WP_Store_cyan.png" />
     <Content Include="Images\CanyonlandsForWebsite.jpg" />
+    <Content Include="Images\Contact\FB-f-Logo__blue_58.png" />
+    <Content Include="Images\Contact\In-2C-54px-TM.png" />
+    <Content Include="Images\Contact\no_mail.png" />
+    <Content Include="Images\Contact\TwitterLogo.png" />
+    <Content Include="Images\Experience\caltech-logo.jpg" />
+    <Content Include="Images\Experience\microsoft_logo.svg" />
+    <Content Include="Images\Experience\RockeshipIcon.jpg" />
     <Content Include="Images\GitHub-Mark-Light-120px-plus.png" />
     <Content Include="Images\GitHub_Logo.png" />
     <Content Include="Images\GuruAlphaWithChassis.png" />
     <Content Include="Images\pattern-grid%401x.jpg" />
     <Content Include="Images\PointReaderScreenshot.png" />
     <Content Include="Images\PointReaderWithChassis.png" />
+    <Content Include="Images\Skills\laptop.png" />
+    <Content Include="Images\Skills\lite-bulb-icon.png" />
     <Content Include="Images\SkylineForWebsite.jpg" />
     <Content Include="Images\Tablet_Ozwego_left_angle_1.png" />
     <Content Include="Index.html" />
@@ -140,6 +150,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ApplicationInsights.config" />
+    <None Include="Properties\PublishProfiles\jonathanyeung.pubxml" />
     <None Include="Properties\PublishProfiles\PersonalWebsite1966.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,7 +158,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="_EventRegisterUsersGuide.docx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

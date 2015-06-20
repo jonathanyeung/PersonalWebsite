@@ -1,7 +1,11 @@
 ﻿$(window).scroll(function () {
 
     //ToDo: Look up enums in JavaScript
-    var currentSection = 1;
+    var scrollEpsilon = 3;
+    var currentSection = 0;
+    
+    // This needs to be hardcoded, because header.sticky has no height when the user 
+    // is at the very top of the page.  Get this value from MainPage.css
 
     if ($(this).scrollTop() > 1) {
         $('header').addClass("sticky");
@@ -10,27 +14,33 @@
         $('header').removeClass("sticky");
     }
 
-    if ($(this).scrollTop() > $('#SkillsSection').offset().top - $('header.sticky').height()) { // ToDo: Figure out if .sticky here is right or if it actually does anything.
+    if ($(this).scrollTop() >= $('#SkillsSection').offset().top - $('header.sticky').height() - scrollEpsilon) {
         currentSection = 1;
     }
 
-    if ($(this).scrollTop() > $('#ExperienceSection').offset().top - $('header.sticky').height()) {
+    if ($(this).scrollTop() >= $('#ExperienceSection').offset().top - $('header.sticky').height() - scrollEpsilon) {
         currentSection = 2;
     }
 
-    if ($(this).scrollTop() > $('#ProjectsSection').offset().top - $('header.sticky').height()) {
+    if ($(this).scrollTop() >= $('#ProjectsSection').offset().top - $('header.sticky').height() - scrollEpsilon) {
         currentSection = 3;
     }
 
-    // ToDo: Fix this such that contact is displayed when the user has scrolled all the way to the bottom of the page.
-    if ($(this).scrollTop() > $('#ContactSection').offset() + $('#ContactSection').height()) {
+    // If we're below the contact section, or at the bottom of the page:
+    if ($(this).scrollTop() >= $('#ContactSection').offset() + $('#ContactSection').height() ||
+        $(this).scrollTop() + $(window).height() == $(document).height()) {
         currentSection = 4;
+    }
+
+    if ($(this).scrollTop() < $('#SkillsSection').offset().top - $('header.sticky').height())
+    {
+        currentSection = 0;
     }
 
     $('#SkillsNavBarLi').removeClass("emphasized");
     $('#ExperienceNavBarLi').removeClass("emphasized");
     $('#projectsNavBarLi').removeClass("emphasized");
-    $('#animationsNavBarLi').removeClass("emphasized");
+    $('#contactNavBarLi').removeClass("emphasized");
 
     if (currentSection == 1) {
         $('#SkillsNavBarLi').addClass("emphasized");
@@ -45,7 +55,7 @@
     }
 
     else if (currentSection == 4) {
-        $('#animationsNavBarLi').addClass("emphasized");
+        $('#contactNavBarLi').addClass("emphasized");
     }
 
 });
