@@ -2,7 +2,9 @@
     width: 1000px;
     height: 500px;
     position: relative;
-    display:table-cell;
+    display:table;
+    margin:auto;
+    margin-bottom: 100px;
 }
 
 .prevButton, .nextButton {
@@ -10,11 +12,18 @@
     position: absolute;
     width: 7%;
     height: 500px;
-    font-size: 40px;
     color: white;
     border-width: 0px;
     top: 20px;
     background-color: black;
+}
+
+.prevButton p{
+    font-size:40px;
+}
+
+.nextButton p{
+    font-size:40px;
 }
 
 .pan {

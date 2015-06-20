@@ -1,12 +1,12 @@
-﻿/*#timelineContainer {
-    border: medium;
-    border-color: mintcream;
-    background-color: mintcream;
-}*/
+﻿#timelineContainer {
+    margin-left:15%;
+    margin-bottom:100px;
+}
 
+/*ToDo: Remove the hard-coded height and compute it based on the height of the other objects in the experience section.*/
 .rectangle {
     width: 10px;
-    height: 1500px;
+    height: 1220px; 
     background-color: black;
     margin-left: 200px;
 }
@@ -50,14 +50,17 @@
 
 .timelineDescriptionHeader {
     font-size: x-large;
+        text-align:left;   
 }
 
 .timelineDescriptionSubheader {
     font-size: small;
     opacity: .7;
+        text-align:left;   
 }
 
 .timelineDescriptionContent {
+    text-align:left;    
 }
 
 .eventImage{
@@ -65,7 +68,7 @@
     width: 40px;
     height: 40px;
     margin-left: -15px;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     background-color:white;
     border-width: 5px;
     border-color: white;
