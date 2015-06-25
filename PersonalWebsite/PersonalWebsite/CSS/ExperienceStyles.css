@@ -107,3 +107,10 @@
     font-size: large;
     text-align: center;
 }
+
+.rocketImage{
+        float: left;
+    width:200px;
+        margin-left: -92px;
+        margin-top:-120px;
+}

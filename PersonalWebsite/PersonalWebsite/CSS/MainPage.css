@@ -147,6 +147,10 @@ header {
     background-color: #4bc8de;
 }
 
+.dark-accent-color{
+    background-color: #070716;
+}
+
 button:focus{
     outline: 0;
 }
