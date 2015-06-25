@@ -1,0 +1,101 @@
+﻿.projectCarousel {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    display:table;
+    margin:auto;
+    margin-bottom: 100px;
+}
+
+.prevButton, .nextButton {
+    outline: none;
+    position: absolute;
+    width: 7%;
+    height: 500px;
+    color: white;
+    border-width: 0px;
+    top: 20px;
+}
+
+.prevButton p{
+    font-size:40px;
+}
+
+.nextButton p{
+    font-size:40px;
+}
+
+.pan {
+    width: 10000px;
+}
+
+#carouselContent {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+#wrapper {
+    width: 1000px;
+    height: 550px;
+}
+
+.carouselItem {
+    position: relative;
+    float: left;
+    width: 1000px;
+    height: 550px;
+}
+
+.picture {
+    float: left;
+    width: 300px;
+    vertical-align: central;
+    margin-left: 7%;
+    margin-right: 5%;
+    overflow: visible;
+}
+
+.rightPicture {
+    width: 300px;
+    vertical-align: central;
+    margin-right: 7%;
+    float: left;
+    margin-top: 5%;
+}
+
+.content {
+    vertical-align: central;
+    text-align: left;
+    width: 600px;
+    display: table-cell;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.badges {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+}
+
+.contentContainer {
+    display: table;
+    vertical-align: central;
+    margin-left: 50px;
+    margin-top: 8%;
+    margin-right: 7%;
+}
+
+.leftContentContainer {
+    float: left;
+    display: table;
+    vertical-align: central;
+    margin-top: 7%;
+    margin-left: 7%;
+}
+
+.filler {
+    clear: left;
+}
