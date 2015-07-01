@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Personal Website</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!--Local Javascript code-->
+    <script src="JS/ProjectCarousel.js" type="text/javascript"></script>
+    <script src="JS/Main.js" type="text/javascript"></script>
+    <script src="JS/NavBar.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="CSS/MainPage.css" />
+    <link rel="stylesheet" href="CSS/SkillsStyles.css" />
+    <link rel="stylesheet" href="CSS/ExperienceStyles.css" />
+    <link rel="stylesheet" href="CSS/ProjectsStyles.css" />
+    <link rel="stylesheet" href="CSS/ContactStyles.css" />
+
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="imageHeader" style="text-align:center;align-content:center;">
+        <header>
+            <ul id="navlist">
+                <li id="SkillsNavBarLi">
+                    <button class="navlistButton">
+                        SKILLS
+                    </button>
+                </li>
+                <li id="ExperienceNavBarLi">
+                    <button class="navlistButton">
+                        EXPERIENCE
+                    </button>
+                </li>
+                <li id="projectsNavBarLi">
+                    <button class="navlistButton">
+                        PROJECTS
+                    </button>
+                </li>
+                <li id="contactNavBarLi">
+                    <button class="navlistButton">
+                        CONTACT
+                    </button>
+                </li>
+            </ul>
+        </header>
+
+        <div class="cover-image-container" >
+            <div class="darken-image-overlay"></div>
+        </div>
+
+
+        <div id="cover-image-content">
+            <h1 id="headerName">Jonathan Yeung</h1>
+            <h3 id="headerSubtext">Software Engineer</h3>
+            <button id="check-me-out-button" class="accent-button">CHECK ME OUT</button>
+        </div>
+
+    </div>
+
+    <div id="SkillsSection" class="row hatch-background">
+        <div class="col-sm-12 skills-styles section-content" style="margin-bottom:100px">
+            <div class="section-Header" style="margin-bottom:100px">
+                <h1 class="section-Titles">SKILLS</h1>
+                <h5 class="section-Subtitles">Programming • Engineering • Leadership</h5>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="skills-circle">
+                    <img class="skills-circle-content" src="Images/Skills/laptop.png" width="60" />
+                </div>
+                <h5>Technologies</h5>
+                <p>.NET, WinRT, Cloud/Azure, Databases, Cosmos</p>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="skills-circle">
+                    <p class="skills-circle-content"><&sol;></p>
+                </div>
+                <h5>Languages</h5>
+                <p>C#, C++, SQL, Javascript, HTML/CSS</p>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="skills-circle">
+                    <img class="skills-circle-content" src="Images/Skills/lite-bulb-icon.png" width="60" />
+                </div>
+                <h5>Interests</h5>
+                <p>App Development, Data Analysis</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="ExperienceSection" class="row">
+        <div class="col-sm-12 section-content">
+
+            <div id="headerBackground" style="width:100%;height:250px;background-color:#070716">
+                <div class="section-Header">
+                    <h1 class="section-Titles" style="color:white;display:inline-block">EXPERIENCE</h1>
+                    <h5 class="section-Subtitles" style="color:white">Work History • Education</h5>
+                </div>
+            </div>
+
+            <div id="timelineContainer">
+
+                <div class="timelineEntry" style="clear:left">
+                    <p class="timelineEntryDate">The Future</p>
+                </div>
+
+                <img class="rocketImage" style="margin-bottom:100px" src="Images/Experience/RocketProject.png" />
+
+                <div class="timelineEntry" style="clear:left">
+                    <p class="timelineEntryHeading">Software Developer Engineer</p>
+                    <p class="timelineEntryDate">March 2014 - Present</p>
+                </div>
+
+                <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
+
+                <div class="timelineDescription">
+                    <div class="timelineDescriptionHeader">Microsoft</div>
+                    <div class="timelineDescriptionSubheader">Windows Phone Customer Experiences Team</div>
+                    <div class="timelineDescriptionContent">
+                        <ul>
+                            <li>Developed a telemetry collection and analysis solution for high battery drain problems on retail Windows Phone devices.  The solution identified key battery bugs which resulted in a 20% gain in average battery life. </li>
+                            <li>Created a tool to analyze out-of-memory OS crashes.  The tool was able to identify top memory-intensive processes in the system by analyzing call stacks from thousands of retail crashes.</li>
+                            <li>Developed a reporting solution for system health.  By utilizing COSMOS (Microsoft’s big data platform), the solution aggregated data from millions of devices to report key performance indicators on a daily cadence. </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timelineEntry" style="clear:left">
+                    <p class="timelineEntryHeading">Software Developer Engineer in Test</p>
+                    <p class="timelineEntryDate">Sept. 2011 - March 2014</p>
+                </div>
+
+                <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
+
+                <div class="timelineDescription">
+                    <div class="timelineDescriptionHeader">Microsoft</div>
+                    <div class="timelineDescriptionSubheader">Windows Phone Developer Platform Team</div>
+                    <div class="timelineDescriptionContent">
+
+                        <ul>
+                            <li>Owned QA of background execution in the 3rd party app framework for Windows Phone 8.1.  Authored automated functional, integration, stress, and end to end scenario tests for over 100 API’s from a full stack perspective—from Windows kernel components to the 3rd party app developer API surface. </li>
+                            <li>Worked extensively with core Windows teams for platform convergence across phone and desktop; collaborated closely with the Visual Studio division to develop a Phone SDK for both the Silverlight and Jupiter platforms.  </li>
+                            <li>Collaborated with 3rd party developers including WhatsApp, Nokia, Skype, to understand their scenario requirements and deliver enabling features in our app platform such as Bluetooth LE and VOIP. </li>
+                        </ul>
+                    </div>
+
+                    <div class="timelineDescriptionSubheader">Windows Phone Rendering Team</div>
+                    <div class="timelineDescriptionContent">
+
+                        <ul>
+                            <li>Worked on automated testing of the composition and rendering engine of Windows Phone for the 8.0 release</li>
+                            <li>Owned rendering performance; developed rigorous automated performance tests and data analysis tools to identify bottlenecks and present them to partners like Qualcomm and Nokia </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="timelineEntry" style="clear:left">
+                    <p class="timelineEntryHeading">Education</p>
+                    <p class="timelineEntryDate">Graduated June 2011</p>
+                </div>
+
+                <img class="eventImage" src="Images/Experience/caltech-logo.jpg" />
+
+                <div class="timelineDescription">
+                    <div class="timelineDescriptionHeader">California Institute of Technology</div>
+                    <div class="timelineDescriptionSubheader">B.S. Electrical Engineering with Honors</div>
+                    <div class="timelineDescriptionSubheader">Relevant Coursework</div>
+                    <div class="timelineDescriptionContent">
+                        <ul>
+                            <li>Electrical Engineering: Solid-State Electronics for Integrated Circuits, Micro/Nanofabrication Laboratory, Feedback and Control Circuits, Information and Logic, Advanced Digital Signal Processing, Communication Systems </li>
+                            <li>Computer Science: Principles of Microprocessor Systems, Microprocessor Systems Laboratory, Advanced Digital Systems Design, Databases </li>
+                            <li>Mathematics: Multi-Variable Calculus, Linear Algebra, Probability and Statistics, Differential Equations, Advanced Differential Equations, Partial Differential Equations, Complex Analysis </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timelineEntry" style="clear:left">
+                    <p class="timelineEntryHeading">Software Engineer Intern</p>
+                    <p class="timelineEntryDate">June 2010 - Sept. 2010</p>
+                </div>
+
+                <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
+
+                <div class="timelineDescription">
+                    <div class="timelineDescriptionHeader">Microsoft</div>
+                    <div class="timelineDescriptionSubheader">Windows Phone Core Engineering Team</div>
+                    <div class="timelineDescriptionContent">
+                        <ul>
+                            <li>Designed and developed a tool that simulated stress conditions (high CPU activity, low memory, heavy disk IO) for the Windows Phone 7 release to facilitate stress testing across different components.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--The vertical bar that forms the timeline-->
+                <div class="rectangle"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="ProjectsSection" class="row hatch-background">
+        <div class="col-sm-12 section-content">
+            <div class="section-Header">
+                <h1 class="section-Titles">PROJECTS</h1>
+                <h5 class="section-Subtitles">Phone and Web Clients • Backends</h5>
+            </div>
+
+
+            <div class="projectCarousel">
+                <div class="dark-accent-color" style="width:1000px;height:500px;position:absolute;top:20px">
+                </div>
+
+                <div id="wrapper">
+                    <div id="carouselContent">
+                        <div class="pan">
+                            <!--Guru Alpha-->
+                            <div class="carouselItem">
+                                <div class="picture">
+                                    <img src="/Images/GuruAlphaWithChassis.png" width="300" />
+                                </div>
+                                <div class="contentContainer">
+                                    <div class="content">
+                                        <h1 style="margin-left:5px">Guru Alpha</h1>
+                                        <p>
+                                            Guru is the answer to all of your questions!  This Windows Phone app is a portal to Wolfram Alpha, an extremely powerful and extensive knowledge database.  Use it to help with your physics homework, plot complex graphs, and discover facts about history and pop culture.  You can even tune your guitar with this app!  The possibilities are endless.
+
+                                            Unlike other Wolfram Alpha client apps, this app uses an entirely native user interface for a quick and responsive experience.  This app also tightly integrates with Cortana, allowing you to ask questions with your voice.
+                                        </p>
+                                        <p style="margin-top:15px;font-style:italic">Technologies: XAML, C#, REST</p>
+                                    </div>
+                                </div>
+                                <div class="badges">
+                                    <a target="_blank" href="http://www.windowsphone.com/en-us/store/app/guru-alpha/377191d1-e282-4c0f-8c45-fe780cd6ec84">
+                                        <img src="/Images/462x120_WP_Store_cyan.png" width="150" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--Ozwego-->
+                            <div class="carouselItem">
+                                <div class="leftContentContainer">
+                                    <div class="content" style="width:450px">
+                                        <h1 style="margin-left:5px">Ozwego</h1>
+                                        <p>
+                                            Ozwego is a real-time multiplayer word game for the Windows Store. Ozwego mimics the gameplay of the popular fast paced game of Bananagrams. Users can find friends to play against, or face other online users through the matchmaking system.
+
+                                            Ozwego uses the Xaml/C# framework for its client implementation. The UI is optimized for both touch and mouse, so that both desktop and tablet users can play competitively against each other.
+
+                                            The backend is implemented in C# on a Windows Azure Virtual Machine, for a highly scalable solution that can support thousands of players. The backend was designed to be multi-instance with a frontend load balancer to guarantee the service will have 99.9% uptime as per Azure's Service Level Agreement.
+                                        </p>
+                                        <p style="margin-top:15px;font-style:italic">Technologies: Windows Azure, TCP, XAML, C#</p>
+                                    </div>
+                                </div>
+                                <div class="rightPicture">
+                                    <img src="/Images/Tablet_Ozwego_left_angle_1.png" width="450" />
+                                </div>
+                                <div class="badges" style="bottom:7%">
+                                    <a target="_blank" href="https://github.com/jonathanyeung/ozwego">
+                                        <img src="/Images/GitHub-Mark-Light-120px-plus.png" width="40" style="float:left;clear:both;" />
+                                        <img src="/Images/GitHub_Logo.png" width="40" style="float:left;clear:both" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--Point Reader-->
+                            <div class="carouselItem">
+                                <div class="picture">
+                                    <img src="/Images/PointReaderWithChassis.png" width="300" />
+                                </div>
+                                <div class="contentContainer">
+                                    <div class="content">
+                                        <h1 style="margin-left:5px">Point Reader</h1>
+                                        <p>
+                                            Point Reader is a Windows Phone app that lets you speed read through a method called rapid
+                                            serial visual presentation. When people read books, they have to
+                                            carefully scrutinize each word and reset their gaze when the end
+                                            of a line is reached. Considering how many lines are in a novel,
+                                            this slow down can be a significant amount of time! Point reader
+                                            flashes words one by one in a fixed position, so that your eyes
+                                            can remain focused in one spot. This results in faster reading
+                                            speeds. Researchers have found that with this technique, people
+                                            are able to read 33% faster on average. With practice, people can
+                                            read even faster.
+                                        </p>
+                                        <p style="margin-top:15px;font-style:italic">Technologies: Silverlight, XAML, C#, OAuth</p>
+                                    </div>
+                                </div>
+                                <div class="badges">
+                                    <a target="_blank" href="http://www.windowsphone.com/en-us/store/app/point-reader/8940b4e1-c8dc-424a-9d30-098ef9911dcb">
+                                        <img src="/Images/462x120_WP_Store_cyan.png" width="150" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="prevButton dark-accent-color" style="left:0px;">
+                    <p>&#8249</p>
+                </button>
+
+                <button class="nextButton dark-accent-color" style="right:0px;">
+                    <p>&#8250</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ContactSection" class="row">
+        <div class="col-sm-12 section-content dark-accent-color">
+            <h1 class="section-Titles" style="color:white">CONTACT</h1>
+            <h5 class="section-Subtitles" style="color:white">QUESTIONS  •  COMMENTS  •  CONCERNS</h5>
+
+            <br />
+            <br />
+
+            <div>
+                <ul id="navlist">
+                    <li>
+                        <a target="_top" href="mailto:jonathanyeung@outlook.com">
+                            <img src="Images/Contact/Mail.png" width="40" />
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/profile/view?id=282180534">
+                            <img src="Images/Contact/In-2C-54px-TM.png" width="40" />
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/jonathan.w.yeung">
+                            <img src="/Images/Contact/FB-f-Logo__blue_58.png" width="40" />
+                        </a>
+                    </li>
+                    <!--<li>
+                        <a target="_blank" href="https://twitter.com/YEUNG_MONEY">
+                            <img src="Images/Contact/TwitterLogo.png" width="40" />
+                        </a>
+                    </li>-->
+                </ul>
+            </div>
+
+            <br />
+            <br />
+
+            <h5 class="contactSubText">Designed by Jonathan Yeung | Seattle, Washington</h5>
+
+            <br />
+        </div>
+    </div>
+
+
+
+    <!--<div id="3 column reference" class="row">
+        <div class="col-sm-4 column-reference">.col-sm-4</div>
+        <div class="col-sm-4 column-reference" style="background-color:lightblue">.col-sm-4</div>
+        <div class="col-sm-4 column-reference">.col-sm-4</div>
+    </div>-->
+    <!--<div id="12 column reference" class="row">
+        <div class="col-sm-1 column-reference">.col-sm-1</div>
+        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
+        <div class="col-sm-1 column-reference">.col-sm-1</div>
+        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
+        <div class="col-sm-1 column-reference">.col-sm-1</div>
+        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
+        <div class="col-sm-1 column-reference">.col-sm-1</div>
+        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
+        <div class="col-sm-1 column-reference">.col-sm-1</div>
+        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
+        <div class="col-sm-1 column-reference">.col-sm-1</div>
+        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
+    </div>-->
+
+</body>
+</html>
