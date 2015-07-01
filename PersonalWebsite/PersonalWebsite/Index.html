@@ -1,21 +1,23 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Personal Website</title>
+    <title>Jonathan Yeung</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!--Local Javascript code-->
     <script src="JS/ProjectCarousel.js" type="text/javascript"></script>
     <script src="JS/Main.js" type="text/javascript"></script>
     <script src="JS/NavBar.js" type="text/javascript"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="CSS/MainPage.css" />
     <link rel="stylesheet" href="CSS/SkillsStyles.css" />
@@ -29,8 +31,8 @@
 </head>
 <body>
     <div id="imageHeader" style="text-align:center;align-content:center;">
-        <header>
-            <ul id="navlist">
+        <!--<header class="row">
+            <ul id="navlist" class="col-sm-12">
                 <li id="SkillsNavBarLi">
                     <button class="navlistButton">
                         SKILLS
@@ -52,9 +54,39 @@
                     </button>
                 </li>
             </ul>
-        </header>
+        </header>-->
 
-        <div class="cover-image-container" >
+        <nav class="navbar navbar-inverse navbar-fixed-top awesomeNav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--<p class="navbar-brand navbar-toggle" style="color:blue;left:0px">Jonathan Yeung</p>-->
+                    <button type="button" class=" navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav" id="navlist">
+                        <li id="SkillsNavBarLi">
+                            <a href="#">SKILLS</a>
+                        </li>
+                        <li id="ExperienceNavBarLi">
+                            <a href="#">EXPERIENCE</a>
+                        </li>
+                        <li id="projectsNavBarLi">
+                            <a href="#">PROJECTS</a>
+                        </li>
+                        <li id="contactNavBarLi">
+                            <a href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="cover-image-container">
             <div class="darken-image-overlay"></div>
         </div>
 
@@ -76,7 +108,7 @@
 
             <div class="col-sm-4">
                 <div class="skills-circle">
-                    <img class="skills-circle-content" src="Images/Skills/laptop.png" width="60" />
+                    <img class="skills-circle-content " src="Images/Skills/laptop.png" width="60" />
                 </div>
                 <h5>Technologies</h5>
                 <p>.NET, WinRT, Cloud/Azure, Databases, Cosmos</p>
@@ -110,104 +142,115 @@
                 </div>
             </div>
 
-            <div id="timelineContainer">
+            <div class="row">
+                <div class="hidden-sm col-md-2"></div>
 
-                <div class="timelineEntry" style="clear:left">
-                    <p class="timelineEntryDate">The Future</p>
-                </div>
+                <div id="timelineContainer" class="col-sm-12 col-md-8">
 
                 <img class="rocketImage" style="margin-bottom:100px" src="Images/Experience/RocketProject.svg" />
 
-                <div class="timelineEntry" style="clear:left">
-                    <p class="timelineEntryHeading">Software Developer Engineer</p>
-                    <p class="timelineEntryDate">March 2014 - Present</p>
-                </div>
+                    <div class="row">
+                        <div class="timelineEntry col-sm-3">
+                            <p class="timelineEntryHeading">Software Developer Engineer</p>
+                            <p class="timelineEntryDate">March 2014 - Present</p>
+                        </div>
 
-                <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
+                        <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
 
-                <div class="timelineDescription">
-                    <div class="timelineDescriptionHeader">Microsoft</div>
-                    <div class="timelineDescriptionSubheader">Windows Phone Customer Experiences Team</div>
-                    <div class="timelineDescriptionContent">
-                        <ul>
-                            <li>Developed a telemetry collection and analysis solution for high battery drain problems on retail Windows Phone devices.  The solution identified key battery bugs which resulted in a 20% gain in average battery life. </li>
-                            <li>Created a tool to analyze out-of-memory OS crashes.  The tool was able to identify top memory-intensive processes in the system by analyzing call stacks from thousands of retail crashes.</li>
-                            <li>Developed a reporting solution for system health.  By utilizing COSMOS (Microsoft’s big data platform), the solution aggregated data from millions of devices to report key performance indicators on a daily cadence. </li>
-                        </ul>
+                        <div class="timelineDescription container col-sm-9">
+                            <div class="timelineDescriptionBottomMargin">
+                                <div class="timelineDescriptionHeader">Microsoft</div>
+                                <div class="timelineDescriptionSubheader">Windows Phone Customer Experiences Team</div>
+                                <div class="timelineDescriptionContent">
+                                    <ul>
+                                        <li>Developed a telemetry collection and analysis solution for high battery drain problems on retail Windows Phone devices.  The solution identified key battery bugs which resulted in a 20% gain in average battery life. </li>
+                                        <li>Created a tool to analyze out-of-memory OS crashes.  The tool was able to identify top memory-intensive processes in the system by analyzing call stacks from thousands of retail crashes.</li>
+                                        <li>Developed a reporting solution for system health.  By utilizing COSMOS (Microsoft’s big data platform), the solution aggregated data from millions of devices to report key performance indicators on a daily cadence. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="timelineEntry col-sm-3">
+                            <p class="timelineEntryHeading">Software Developer Engineer in Test</p>
+                            <p class="timelineEntryDate">Sept. 2011 - March 2014</p>
+                        </div>
+
+                        <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
+
+                        <div class="timelineDescription container col-sm-9">
+                            <div class="timelineDescriptionBottomMargin">
+                                <div class="timelineDescriptionHeader">Microsoft</div>
+                                <div class="timelineDescriptionSubheader">Windows Phone Developer Platform Team</div>
+                                <div class="timelineDescriptionContent">
+                                    <ul>
+                                        <li>Owned QA of background execution in the 3rd party app framework for Windows Phone 8.1.  Authored automated functional, integration, stress, and end to end scenario tests for over 100 API’s from a full stack perspective—from Windows kernel components to the 3rd party app developer API surface. </li>
+                                        <li>Worked extensively with core Windows teams for platform convergence across phone and desktop; collaborated closely with the Visual Studio division to develop a Phone SDK for both the Silverlight and Jupiter platforms.  </li>
+                                        <li>Collaborated with 3rd party developers including WhatsApp, Nokia, Skype, to understand their scenario requirements and deliver enabling features in our app platform such as Bluetooth LE and VOIP. </li>
+                                    </ul>
+                                </div>
+
+                                <div class="timelineDescriptionSubheader">Windows Phone Rendering Team</div>
+                                <div class="timelineDescriptionContent">
+                                    <ul>
+                                        <li>Worked on automated testing of the composition and rendering engine of Windows Phone for the 8.0 release</li>
+                                        <li>Owned rendering performance; developed rigorous automated performance tests and data analysis tools to identify bottlenecks and present them to partners like Qualcomm and Nokia </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="timelineEntry col-sm-3">
+                            <p class="timelineEntryHeading">Education</p>
+                            <p class="timelineEntryDate">Graduated June 2011</p>
+                        </div>
+
+                        <img class="eventImage" src="Images/Experience/caltech-logo.jpg" />
+
+                        <div class="timelineDescription container col-sm-9">
+                            <div class="timelineDescriptionBottomMargin">
+                                <div class="timelineDescriptionHeader">California Institute of Technology</div>
+                                <div class="timelineDescriptionSubheader">B.S. Electrical Engineering with Honors</div>
+                                <div class="timelineDescriptionSubheader">Relevant Coursework</div>
+                                <div class="timelineDescriptionContent">
+                                    <ul>
+                                        <li>Electrical Engineering: Solid-State Electronics for Integrated Circuits, Micro/Nanofabrication Laboratory, Feedback and Control Circuits, Information and Logic, Advanced Digital Signal Processing, Communication Systems </li>
+                                        <li>Computer Science: Principles of Microprocessor Systems, Microprocessor Systems Laboratory, Advanced Digital Systems Design, Databases </li>
+                                        <li>Mathematics: Multi-Variable Calculus, Linear Algebra, Probability and Statistics, Differential Equations, Advanced Differential Equations, Partial Differential Equations, Complex Analysis </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="timelineEntry col-sm-3" style="border-left:hidden">
+                            <p class="timelineEntryHeading">Software Engineer Intern</p>
+                            <p class="timelineEntryDate">June 2010 - Sept. 2010</p>
+                        </div>
+
+                        <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
+
+                        <div class="timelineDescription container col-sm-9" style="border-left:hidden">
+                            <div class="timelineDescriptionBottomMargin">
+                                <div class="timelineDescriptionHeader">Microsoft</div>
+                                <div class="timelineDescriptionSubheader">Windows Phone Core Engineering Team</div>
+                                <div class="timelineDescriptionContent">
+                                    <ul>
+                                        <li>Designed and developed a tool that simulated stress conditions (high CPU activity, low memory, heavy disk IO) for the Windows Phone 7 release to facilitate stress testing across different components.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="timelineEntry" style="clear:left">
-                    <p class="timelineEntryHeading">Software Developer Engineer in Test</p>
-                    <p class="timelineEntryDate">Sept. 2011 - March 2014</p>
-                </div>
-
-                <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
-
-                <div class="timelineDescription">
-                    <div class="timelineDescriptionHeader">Microsoft</div>
-                    <div class="timelineDescriptionSubheader">Windows Phone Developer Platform Team</div>
-                    <div class="timelineDescriptionContent">
-
-                        <ul>
-                            <li>Owned QA of background execution in the 3rd party app framework for Windows Phone 8.1.  Authored automated functional, integration, stress, and end to end scenario tests for over 100 API’s from a full stack perspective—from Windows kernel components to the 3rd party app developer API surface. </li>
-                            <li>Worked extensively with core Windows teams for platform convergence across phone and desktop; collaborated closely with the Visual Studio division to develop a Phone SDK for both the Silverlight and Jupiter platforms.  </li>
-                            <li>Collaborated with 3rd party developers including WhatsApp, Nokia, Skype, to understand their scenario requirements and deliver enabling features in our app platform such as Bluetooth LE and VOIP. </li>
-                        </ul>
-                    </div>
-
-                    <div class="timelineDescriptionSubheader">Windows Phone Rendering Team</div>
-                    <div class="timelineDescriptionContent">
-
-                        <ul>
-                            <li>Worked on automated testing of the composition and rendering engine of Windows Phone for the 8.0 release</li>
-                            <li>Owned rendering performance; developed rigorous automated performance tests and data analysis tools to identify bottlenecks and present them to partners like Qualcomm and Nokia </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="timelineEntry" style="clear:left">
-                    <p class="timelineEntryHeading">Education</p>
-                    <p class="timelineEntryDate">Graduated June 2011</p>
-                </div>
-
-                <img class="eventImage" src="Images/Experience/caltech-logo.jpg" />
-
-                <div class="timelineDescription">
-                    <div class="timelineDescriptionHeader">California Institute of Technology</div>
-                    <div class="timelineDescriptionSubheader">B.S. Electrical Engineering with Honors</div>
-                    <div class="timelineDescriptionSubheader">Relevant Coursework</div>
-                    <div class="timelineDescriptionContent">
-                        <ul>
-                            <li>Electrical Engineering: Solid-State Electronics for Integrated Circuits, Micro/Nanofabrication Laboratory, Feedback and Control Circuits, Information and Logic, Advanced Digital Signal Processing, Communication Systems </li>
-                            <li>Computer Science: Principles of Microprocessor Systems, Microprocessor Systems Laboratory, Advanced Digital Systems Design, Databases </li>
-                            <li>Mathematics: Multi-Variable Calculus, Linear Algebra, Probability and Statistics, Differential Equations, Advanced Differential Equations, Partial Differential Equations, Complex Analysis </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timelineEntry" style="clear:left">
-                    <p class="timelineEntryHeading">Software Engineer Intern</p>
-                    <p class="timelineEntryDate">June 2010 - Sept. 2010</p>
-                </div>
-
-                <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
-
-                <div class="timelineDescription">
-                    <div class="timelineDescriptionHeader">Microsoft</div>
-                    <div class="timelineDescriptionSubheader">Windows Phone Core Engineering Team</div>
-                    <div class="timelineDescriptionContent">
-                        <ul>
-                            <li>Designed and developed a tool that simulated stress conditions (high CPU activity, low memory, heavy disk IO) for the Windows Phone 7 release to facilitate stress testing across different components.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--The vertical bar that forms the timeline-->
-                <div class="rectangle"></div>
+                <div class="hidden-sm col-md-2"></div>
             </div>
-
         </div>
     </div>
 
@@ -360,28 +403,6 @@
             <br />
         </div>
     </div>
-
-
-
-    <!--<div id="3 column reference" class="row">
-        <div class="col-sm-4 column-reference">.col-sm-4</div>
-        <div class="col-sm-4 column-reference" style="background-color:lightblue">.col-sm-4</div>
-        <div class="col-sm-4 column-reference">.col-sm-4</div>
-    </div>-->
-    <!--<div id="12 column reference" class="row">
-        <div class="col-sm-1 column-reference">.col-sm-1</div>
-        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
-        <div class="col-sm-1 column-reference">.col-sm-1</div>
-        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
-        <div class="col-sm-1 column-reference">.col-sm-1</div>
-        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
-        <div class="col-sm-1 column-reference">.col-sm-1</div>
-        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
-        <div class="col-sm-1 column-reference">.col-sm-1</div>
-        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
-        <div class="col-sm-1 column-reference">.col-sm-1</div>
-        <div class="col-sm-1 column-reference" style="background-color:lightblue">.col-sm-1</div>
-    </div>-->
 
 </body>
 </html>

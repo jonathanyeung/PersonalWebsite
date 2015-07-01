@@ -1,4 +1,5 @@
 ﻿body {
+    /*overflow-x:hidden;*/
 }
 
 .hatch-background {
@@ -23,7 +24,6 @@ header {
     height: 108px;
     background: black;
     opacity: .6;
-    color: #fff;
     font-family: 'Open Sans', sans-serif;
     z-index: 100;
     transition: all 0.4s ease;
@@ -31,12 +31,22 @@ header {
     -moz-transition: all 0.4s ease;
 }
 
-    header.sticky {
-        line-height: 68px;
-        height: 68px;
-        font-size: 18px;
-        opacity: .8;
-    }
+.awesomeNav {
+    text-align: center;
+    background: black;
+    opacity: .6;
+    font-size: 28px;
+    line-height: 108px;
+    height: 108px;
+        font-family: 'Open Sans', sans-serif;
+}
+
+header.sticky {
+    line-height: 68px;
+    height: 68px;
+    font-size: 18px;
+    opacity: .8;
+}
 
 #navlist {
     text-align: center;
@@ -87,7 +97,7 @@ header {
     width: 100%;
     height: 600px;
     background-size: cover;
-    background-image:url("../Images/SkylineForWebsite.jpg");
+    background-image: url("../Images/SkylineForWebsite.jpg");
     background-position: 50% 20%;
     margin: 0 auto;
 }
