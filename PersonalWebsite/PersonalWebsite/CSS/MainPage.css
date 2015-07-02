@@ -33,33 +33,36 @@ header {
 
 
 
-header.sticky {
-    line-height: 68px;
-    height: 68px;
-    font-size: 18px;
+/*header.sticky {
+        line-height: 68px;
+        height: 68px;
+        font-size: 18px;
+        opacity: .8;
+    }*/
+
+.navBarFixed {
+    /*opacity:.6;*/
+    background-color: black;
+    height: 108px;
+    margin-bottom: 0px;
     opacity: .8;
+    /*transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;*/
 }
 
-#navBarFixed{
-    opacity:.6;
-}
-
-#navBarFixed.sticky {
-    line-height: 68px;
-    height: 68px;
-    font-size: 18px;
-    opacity: .8;
-}
+    .navBarFixed.sticky {
+        /*line-height: 68px;
+        height: 68px;
+        opacity: .8;*/
+        height: 68px;
+    }
 
 #navBarContainer {
-        /*background-color:black;*/
-        
+    /*background-color:black;*/
 }
 
 #myNavBar {
-    font-size: 28px;
-    line-height: 108px;
-    height: 108px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -69,31 +72,43 @@ header.sticky {
     font-size: 28px;
 }
 
-.awesomeNav {
-    /*text-align: center;
-    background: black;
-    opacity: .6;
-    font-size: 28px;
-    line-height: 108px;
-    height: 108px;
-    font-family: 'Open Sans', sans-serif;*/
-}
-
+    #navlist.sticky {
+        font-size: 18px;
+    }
 
     #navlist li {
         display: inline;
         list-style-type: none;
-        padding: 20px;
-        transition: all 0.4s ease;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 108px;
+        text-align: center;
     }
 
-        #navlist li.emphasized {
-            color: #335C7D;
-            font-weight: bold;
-            font-size: 20px;
+        #navlist li.sticky {
+            line-height: 68px;
         }
+
+
+        #navlist li > div {
+            display: table;
+            vertical-align: middle;
+        }
+
+            #navlist li > div > a {
+                display: table-cell;
+                color: white;
+                opacity: .6;
+                /* ToDo: Remove these, and make the animation happen with a jQuery function instead of in CSS. */
+                /*transition: all 0.4s ease;
+                -webkit-transition: all 0.4s ease;
+                -moz-transition: all 0.4s ease;*/
+            }
+
+                #navlist li > div > a.emphasized {
+                    color: #335C7D;
+                    font-size: 20px;
+                }
 
 .navlistButton {
     border: hidden;
@@ -159,7 +174,7 @@ header.sticky {
 
 .section-content {
     text-align: center;
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
 /*Used to darken a background image to de-emphasize it.*/
@@ -185,10 +200,10 @@ header.sticky {
     background-color: #4bc8de;
 }
 
-.dark-accent-color{
+.dark-accent-color {
     background-color: #070716;
 }
 
-button:focus{
+button:focus {
     outline: 0;
 }
