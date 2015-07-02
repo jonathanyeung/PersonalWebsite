@@ -30,15 +30,7 @@ header {
     -moz-transition: all 0.4s ease;
 }
 
-.awesomeNav {
-    text-align: center;
-    background: black;
-    opacity: .6;
-    font-size: 28px;
-    line-height: 108px;
-    height: 108px;
-        font-family: 'Open Sans', sans-serif;
-}
+
 
 header.sticky {
     line-height: 68px;
@@ -47,8 +39,43 @@ header.sticky {
     opacity: .8;
 }
 
+#navBarFixed{
+    opacity:.6;
+}
+
+#navBarFixed.sticky {
+    line-height: 68px;
+    height: 68px;
+    font-size: 18px;
+    opacity: .8;
+}
+
+#navBarContainer {
+        /*background-color:black;*/
+        
+}
+
+#myNavBar {
+    font-size: 28px;
+    line-height: 108px;
+    height: 108px;
+    font-family: 'Open Sans', sans-serif;
+}
+
 #navlist {
-    text-align: center;
+    display: inline-block;
+    float: none;
+    font-size: 28px;
+}
+
+.awesomeNav {
+    /*text-align: center;
+    background: black;
+    opacity: .6;
+    font-size: 28px;
+    line-height: 108px;
+    height: 108px;
+    font-family: 'Open Sans', sans-serif;*/
 }
 
 
