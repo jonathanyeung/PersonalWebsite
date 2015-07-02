@@ -31,30 +31,6 @@
 </head>
 <body>
     <div id="imageHeader" style="text-align:center;align-content:center;">
-        <!--<header class="row">
-            <ul id="navlist" class="col-sm-12">
-                <li id="SkillsNavBarLi">
-                    <button class="navlistButton">
-                        SKILLS
-                    </button>
-                </li>
-                <li id="ExperienceNavBarLi">
-                    <button class="navlistButton">
-                        EXPERIENCE
-                    </button>
-                </li>
-                <li id="projectsNavBarLi">
-                    <button class="navlistButton">
-                        PROJECTS
-                    </button>
-                </li>
-                <li id="contactNavBarLi">
-                    <button class="navlistButton">
-                        CONTACT
-                    </button>
-                </li>
-            </ul>
-        </header>-->
 
         <nav class="navbar navbar-inverse navbar-fixed-top" id="navBarFixed">
             <div class="container-fluid" id="navBarContainer">
@@ -100,7 +76,7 @@
     </div>
 
     <div id="SkillsSection" class="row hatch-background">
-        <div class="col-sm-12 skills-styles section-content" style="margin-bottom:100px">
+        <div class="col-sm-12 skills-styles section-content">
             <div class="section-Header" style="margin-bottom:100px">
                 <h1 class="section-Titles">SKILLS</h1>
                 <h5 class="section-Subtitles">Programming • Engineering • Leadership</h5>
@@ -147,7 +123,16 @@
 
                 <div id="timelineContainer" class="col-sm-12 col-md-8">
 
-                <img class="rocketImage" style="margin-bottom:100px" src="Images/Experience/RocketProject.svg" />
+                    <div class="row">
+                        <div class="col-sm-3" id="theFuture">
+                            <p class="timelineEntryDate">The Future</p>
+                        </div>
+                        <div class="timelineDescription container col-sm-9">
+                            <img class="rocketImage" src="Images/Experience/RocketProject.png" />
+                        </div>
+
+                    </div>
+
 
                     <div class="row">
                         <div class="timelineEntry col-sm-3">
@@ -235,7 +220,7 @@
 
                         <img class="eventImage" src="Images/Experience/microsoft_logo.svg" />
 
-                        <div class="timelineDescription container col-sm-9" style="border-left:hidden">
+                        <div class="timelineDescription container col-sm-9" style="border-left:hidden;">
                             <div class="timelineDescriptionBottomMargin">
                                 <div class="timelineDescriptionHeader">Microsoft</div>
                                 <div class="timelineDescriptionSubheader">Windows Phone Core Engineering Team</div>
@@ -256,7 +241,7 @@
 
     <div id="ProjectsSection" class="row hatch-background">
         <div class="col-sm-12 section-content">
-            <div class="section-Header">
+            <div class="section-Header" style="margin-bottom:100px;">
                 <h1 class="section-Titles">PROJECTS</h1>
                 <h5 class="section-Subtitles">Phone and Web Clients • Backends</h5>
             </div>
@@ -363,7 +348,7 @@
     </div>
 
     <div id="ContactSection" class="row">
-        <div class="col-sm-12 section-content dark-accent-color">
+        <div class="col-sm-12 section-content dark-accent-color" style="margin-bottom:0px;">
             <h1 class="section-Titles" style="color:white">CONTACT</h1>
             <h5 class="section-Subtitles" style="color:white">QUESTIONS  •  COMMENTS  •  CONCERNS</h5>
 

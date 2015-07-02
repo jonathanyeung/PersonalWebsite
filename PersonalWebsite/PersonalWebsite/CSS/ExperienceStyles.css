@@ -1,27 +1,26 @@
 ﻿#timelineContainer {
-    margin-bottom: 100px;
     align-content: center;
 }
 
 .timelineEntry {
     float: left;
     padding-right: 20px;
-    vertical-align:middle;
-    margin-top:4px;
+    vertical-align: middle;
+    margin-top: 4px;
 }
 
 .timelineEntryHeading {
     font-size: large;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight:500;
-    vertical-align:middle;
+    font-weight: 500;
+    vertical-align: middle;
 }
 
 .timelineEntryDate {
     font-size: small;
-    font-weight:400;
-    opacity:.7;
+    font-weight: 400;
+    opacity: .7;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -45,7 +44,7 @@
     font-size: small;
     opacity: .7;
     text-align: left;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 .timelineDescriptionContent {
@@ -66,7 +65,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .timelineDescription {
         margin-left: 40px;
     }
@@ -88,11 +87,28 @@
     .eventImage {
         left: 40px;
     }
+
+    .rocketImage {
+        /*float:none;
+        left:0;*/
+        margin-top:-160px;
+    }
+
+    #theFuture{
+        margin-left:80px;
+        position:absolute;
+    }
 }
 
-.rocketImage{
-        float: left;
-    width:200px;
-        margin-left: -92px;
-        margin-top:-120px;
+.rocketImage {
+    float: left;
+    width: 200px;
+    margin-left: -130px;
+    margin-top: -120px;
+    margin-bottom: 60px;
+}
+
+#theFuture{
+    z-index:10;
+    margin-top:5px;
 }

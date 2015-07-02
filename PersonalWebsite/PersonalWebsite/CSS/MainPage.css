@@ -159,6 +159,7 @@ header.sticky {
 
 .section-content {
     text-align: center;
+    margin-bottom:100px;
 }
 
 /*Used to darken a background image to de-emphasize it.*/
