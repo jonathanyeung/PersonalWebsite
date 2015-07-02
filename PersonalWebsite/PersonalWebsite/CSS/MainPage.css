@@ -1,4 +1,5 @@
 ﻿body {
+    /*overflow-x:hidden;*/
 }
 
 .hatch-background {
@@ -183,6 +184,10 @@ header.sticky {
     background-color: #4bc8de;
 }
 
-button:focus {
+.dark-accent-color{
+    background-color: #070716;
+}
+
+button:focus{
     outline: 0;
 }

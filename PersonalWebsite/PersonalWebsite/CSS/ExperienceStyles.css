@@ -1,109 +1,98 @@
 ﻿#timelineContainer {
-    margin-left:15%;
-    margin-bottom:100px;
-}
-
-/*ToDo: Remove the hard-coded height and compute it based on the height of the other objects in the experience section.*/
-.rectangle {
-    width: 10px;
-    height: 1220px; 
-    background-color: black;
-    margin-left: 200px;
-}
-
-#triangle {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border: 20px solid red;
-    border-top-color: green;
-    padding-top: 10px;
-    clear: both;
+    margin-bottom: 100px;
+    align-content: center;
 }
 
 .timelineEntry {
     float: left;
-    width: 200px;
-    padding: 10px;
-    padding-top: 0px;
+    padding-right: 20px;
+    vertical-align:middle;
+    margin-top:4px;
 }
 
 .timelineEntryHeading {
     font-size: large;
     color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+    vertical-align:middle;
 }
 
 .timelineEntryDate {
     font-size: small;
-    color: black;
-    opacity: .5;
+    font-weight:400;
+    opacity:.7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .timelineDescription {
     float: left;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    width: 600px;
+    padding-left: 30px;
+    border-left: thick solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timelineDescriptionBottomMargin {
     margin-bottom: 50px;
 }
 
 .timelineDescriptionHeader {
     font-size: x-large;
-        text-align:left;   
+    text-align: left;
 }
 
 .timelineDescriptionSubheader {
     font-size: small;
     opacity: .7;
-        text-align:left;   
+    text-align: left;
+    margin-bottom:15px;
 }
 
 .timelineDescriptionContent {
-    text-align:left;    
+    text-align: left;
 }
 
-.eventImage{
+.eventImage {
+    position: absolute;
     float: left;
     width: 40px;
     height: 40px;
-    margin-left: -15px;
-    /*margin-top: 5px;*/
-    background-color:white;
+    margin-left: -17px;
+    background-color: white;
     border-width: 5px;
     border-color: white;
     border-style: solid;
+    z-index: 10;
 }
 
-.eventCircle {
-    float: left;
-    width: 20px;
-    height: 20px;
-    margin-left: -5px; /*eventCircle radius - rectangleWidth / 2 */
-    margin-top: 5px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    background-color: black;
-    box-shadow: 0px 0px 0px 4px mintcream;
+
+@media (max-width: 767px) {
+    .timelineDescription {
+        margin-left: 40px;
+    }
+
+    .timelineEntry {
+        margin-left: 40px;
+        border-left: thick solid black;
+        text-align: left;
+    }
+
+    .timelineEntryHeading {
+        margin-left: 10px;
+    }
+
+    .timelineEntryDate {
+        margin-left: 10px;
+    }
+
+    .eventImage {
+        left: 40px;
+    }
 }
 
-.eventRectangle {
-    float: left;
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    background-color: black;
-    box-shadow: 0px 0px 0px 4px mintcream;
-    margin-left: 130px;
-    display: table;
-}
-
-.eventRectangleText {
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
+.rocketImage{
+        float: left;
+    width:200px;
+        margin-left: -92px;
+        margin-top:-120px;
 }
