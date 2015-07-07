@@ -7,6 +7,12 @@ var currentWindowPosition = windowPositionEnum.Top;
 
 $(window).scroll(function () {
 
+    //Don't do any animations on the phone size.
+    if (window.innerWidth < 768)
+    {
+        return;
+    }
+
     //ToDo: Look up enums in JavaScript
     var scrollEpsilon = 3;
     var currentSection = 0;

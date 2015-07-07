@@ -73,13 +73,20 @@
     margin-bottom: 60px;
 }
 
-#theFuture{
-    z-index:10;
-    margin-top:5px;
+#theFuture {
+    z-index: 10;
+    margin-top: 5px;
+}
+
+.navbar-brand {
+    visibility: collapse;
 }
 
 
 @media (max-width: 768px) {
+
+
+
     .timelineDescription {
         margin-left: 40px;
     }
@@ -105,11 +112,11 @@
     .rocketImage {
         /*float:none;
         left:0;*/
-        margin-top:-160px;
+        margin-top: -160px;
     }
 
-    #theFuture{
-        margin-left:80px;
-        position:absolute;
+    #theFuture {
+        margin-left: 80px;
+        position: absolute;
     }
 }

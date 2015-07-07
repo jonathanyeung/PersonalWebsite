@@ -210,27 +210,32 @@ button:focus {
 /*Small Screens (Phones)*/
 @media (max-width: 768px) {
 
+    .navbar-brand {
+        visibility: visible;
+    }
+
     .navBarFixed {
-        height:auto;
-        background-color: purple;
+        height: auto;
+        background-color: #070716;
         opacity: 1;
     }
 
-    .navBarContainer{
+    .navBarContainer {
         padding: 0;
-        height:auto;
-        line-height:none;
+        height: auto;
+        line-height: none;
     }
 
     #navlist li a {
-        /*line-height: 68px;*/
+        line-height: 48px;
         /*background-color:pink;*/
+        font-size: 18px;
     }
 
     #navlist {
-        background-color: aquamarine;
+        /*background-color: aquamarine;*/
         width: 100%;
-        margin:0;
+        margin: 0;
     }
 
     .navbar-toggle {
@@ -246,8 +251,9 @@ button:focus {
         text-align: center;
     }
 
-    #myNavBar{
-        margin:0px;
-        padding:0;
+    #myNavBar {
+        margin: 0px;
+        padding: 0;
+        background-color: #070716;
     }
 }
