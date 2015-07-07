@@ -65,6 +65,20 @@
 }
 
 
+.rocketImage {
+    float: left;
+    width: 200px;
+    margin-left: -130px;
+    margin-top: -120px;
+    margin-bottom: 60px;
+}
+
+#theFuture{
+    z-index:10;
+    margin-top:5px;
+}
+
+
 @media (max-width: 768px) {
     .timelineDescription {
         margin-left: 40px;
@@ -98,17 +112,4 @@
         margin-left:80px;
         position:absolute;
     }
-}
-
-.rocketImage {
-    float: left;
-    width: 200px;
-    margin-left: -130px;
-    margin-top: -120px;
-    margin-bottom: 60px;
-}
-
-#theFuture{
-    z-index:10;
-    margin-top:5px;
 }
