@@ -103,6 +103,7 @@ header {
                 /*transition: all 0.4s ease;
                 -webkit-transition: all 0.4s ease;
                 -moz-transition: all 0.4s ease;*/
+                cursor:pointer;
             }
 
                 #navlist li > div > a.emphasized {
@@ -206,4 +207,9 @@ header {
 
 button:focus {
     outline: 0;
+}
+
+a:hover
+{
+    text-decoration:none;
 }

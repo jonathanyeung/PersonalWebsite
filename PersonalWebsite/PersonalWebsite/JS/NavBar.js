@@ -3,7 +3,67 @@
     Body: 1
 }
 
+liAnimationState = {
+    On: 0,
+    Off: 1
+}
+
+var skillsAnimState = false;
+var experiencesAnimState = false;
+var projectsAnimState = false;
+var contactAnimState = false;
+
+var animationInDuration = 400;
+var animationOutDuration = 400;
+var animationDuration = 400;
+
+var emphasizedFontSize = "20px";
+var deemphasizedFontSize = "18px";
+
+var lastSection = 0;
+
 var currentWindowPosition = windowPositionEnum.Top;
+
+//
+// Deemphasizes the section header in the navbar, if in the necessary state.
+//
+function navListDeemphasize() {
+    if (skillsAnimState) {
+        skillsAnimState = false;
+
+        $('#SkillsNavBarLi a').animate({
+            color: "white",
+            "font-size": deemphasizedFontSize
+        }, { duration: animationOutDuration, queue: false });
+    }
+
+    else if (experiencesAnimState) {
+        experiencesAnimState = false;
+
+        $('#ExperienceNavBarLi a').animate({
+            color: "white",
+            "font-size": deemphasizedFontSize
+        }, { duration: animationOutDuration, queue: false });
+    }
+
+    else if (projectsAnimState) {
+        projectsAnimState = false;
+
+        $('#projectsNavBarLi a').animate({
+            color: "white",
+            "font-size": deemphasizedFontSize
+        }, { duration: animationOutDuration, queue: false });
+    }
+
+    else if (contactAnimState) {
+        contactAnimState = false;
+
+        $('#contactNavBarLi a').animate({
+            color: "white",
+            "font-size": deemphasizedFontSize
+        }, { duration: animationOutDuration, queue: false });
+    }
+}
 
 $(window).scroll(function () {
 
@@ -11,28 +71,21 @@ $(window).scroll(function () {
     var scrollEpsilon = 3;
     var currentSection = 0;
 
-    // This needs to be hardcoded, because header.sticky has no height when the user 
-    // is at the very top of the page.  Get this value from MainPage.css
-
     if ($(this).scrollTop() > 1 && currentWindowPosition == windowPositionEnum.Top) {
 
         currentWindowPosition = windowPositionEnum.Body;
 
-        //$('#navlist').addClass("sticky");
-        //$('#navlist li').addClass("sticky");
-        //$('.navBarFixed').addClass("sticky");
-
         $("#navlist").animate({
-            "font-size": "18px"
-        }, { duration: 400, queue: false });
+            "font-size": deemphasizedFontSize
+        }, { duration: animationDuration, queue: false });
 
         $("#navlist li").animate({
             "line-height": "68px"
-        }, { duration: 400, queue: false });
+        }, { duration: animationDuration, queue: false });
 
         $(".navBarFixed").animate({
             "height": "68px"
-        }, { duration: 400, queue: false });
+        }, { duration: animationDuration, queue: false });
     }
     else if ($(this).scrollTop() <= 1 && currentWindowPosition == windowPositionEnum.Body) {
 
@@ -40,30 +93,26 @@ $(window).scroll(function () {
 
         $("#navlist").animate({
             "font-size": "28px"
-        }, { duration: 400, queue: false });
+        }, { duration: animationDuration, queue: false });
 
         $("#navlist li").animate({
             "line-height": "108px"
-        }, { duration: 400, queue: false });
+        }, { duration: animationDuration, queue: false });
 
         $(".navBarFixed").animate({
             "height": "108px"
-        }, { duration: 400, queue: false });
-
-        //$('#navlist').removeClass("sticky");
-        //$('#navlist li').removeClass("sticky");
-        //$('.navBarFixed').removeClass("sticky");
+        }, { duration: animationDuration, queue: false });
     }
 
-    if ($(this).scrollTop() >= $('#SkillsSection').offset().top - $('#navlist li.sticky').height() - scrollEpsilon) {
+    if ($(this).scrollTop() >= $('#SkillsSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
         currentSection = 1;
     }
 
-    if ($(this).scrollTop() >= $('#ExperienceSection').offset().top - $('#navlist li.sticky').height() - scrollEpsilon) {
+    if ($(this).scrollTop() >= $('#ExperienceSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
         currentSection = 2;
     }
 
-    if ($(this).scrollTop() >= $('#ProjectsSection').offset().top - $('#navlist li.sticky').height() - scrollEpsilon) {
+    if ($(this).scrollTop() >= $('#ProjectsSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
         currentSection = 3;
     }
 
@@ -73,46 +122,50 @@ $(window).scroll(function () {
         currentSection = 4;
     }
 
-    if ($(this).scrollTop() < $('#SkillsSection').offset().top - $('#navlist li.sticky').height()) {
+    if ($(this).scrollTop() < $('#SkillsSection').offset().top - $('#navlist li').height()) {
         currentSection = 0;
     }
 
-    $('#navlist li > div > a').animate({
-        "color": "white",
-        "font-size": "18px"
-    }, { duration: 400, queue: false });
+    if (lastSection != currentSection)
+    {
+        lastSection = currentSection;
 
-    //$('#SkillsNavBarLi a').removeClass("emphasized");
-    //$('#ExperienceNavBarLi a').removeClass("emphasized");
-    //$('#projectsNavBarLi a').removeClass("emphasized");
-    //$('#contactNavBarLi a').removeClass("emphasized");
+        if (currentSection == 1) {
+            navListDeemphasize();
 
-    if (currentSection == 1) {
-        $('#SkillsNavBarLi a').animate({
-            "color": "red",
-            "font-size": "20px"
-        }, { duration: 400, queue: false });
+            skillsAnimState = true;
+
+            $('#SkillsNavBarLi a').animate({
+                color: "#335C7D",
+                "font-size": emphasizedFontSize
+            }, { duration: animationInDuration, queue: false });
+        }
+
+        else if (currentSection == 2) {
+            navListDeemphasize();
+            experiencesAnimState = true;
+            $('#ExperienceNavBarLi a').animate({
+                color: "#335C7D",
+                "font-size": emphasizedFontSize
+            }, { duration: animationInDuration, queue: false });
+        }
+
+        else if (currentSection == 3) {
+            navListDeemphasize();
+            projectsAnimState = true;
+            $('#projectsNavBarLi a').animate({
+                color: "#335C7D",
+                "font-size": emphasizedFontSize
+            }, { duration: animationInDuration, queue: false });
+        }
+
+        else if (currentSection == 4) {
+            navListDeemphasize();
+            contactAnimState = true;
+            $('#contactNavBarLi a').animate({
+                color: "#335C7D",
+                "font-size": emphasizedFontSize
+            }, { duration: animationInDuration, queue: false });
+        }
     }
-
-    else if (currentSection == 2) {
-        $('#ExperienceNavBarLi a').animate({
-            "color": "#335C7D",
-            "font-size": "20px"
-        }, { duration: 400, queue: false });
-    }
-
-    else if (currentSection == 3) {
-        $('#projectsNavBarLi a').animate({
-            "color": "#335C7D",
-            "font-size": "20px"
-        }, { duration: 400, queue: false });
-    }
-
-    else if (currentSection == 4) {
-        $('#contactNavBarLi a').animate({
-            "color": "#335C7D",
-            "font-size": "20px"
-        }, { duration: 400, queue: false });
-    }
-
 });
