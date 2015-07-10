@@ -19,6 +19,7 @@ var animationDuration = 400;
 
 var emphasizedFontSize = "20px";
 var deemphasizedFontSize = "18px";
+var navbarAtTopFontSize = "28px";
 
 var lastSection = 0;
 
@@ -81,7 +82,7 @@ $(window).scroll(function () {
 
         currentWindowPosition = windowPositionEnum.Body;
 
-        $("#navlist").animate({
+        $("#navlist a").animate({
             "font-size": deemphasizedFontSize
         }, { duration: animationDuration, queue: false });
 
@@ -97,10 +98,6 @@ $(window).scroll(function () {
 
         currentWindowPosition = windowPositionEnum.Top;
 
-        $("#navlist").animate({
-            "font-size": "28px"
-        }, { duration: animationDuration, queue: false });
-
         $("#navlist li").animate({
             "line-height": "108px"
         }, { duration: animationDuration, queue: false });
@@ -108,6 +105,11 @@ $(window).scroll(function () {
         $(".navBarFixed").animate({
             "height": "108px"
         }, { duration: animationDuration, queue: false });
+
+        $('#navlist a').animate({
+            color: "white",
+            "font-size": navbarAtTopFontSize
+        }, { duration: animationInDuration, queue: false });
     }
 
     if ($(this).scrollTop() >= $('#SkillsSection').offset().top - $('#navlist li').height() - scrollEpsilon) {

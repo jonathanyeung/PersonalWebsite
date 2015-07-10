@@ -31,6 +31,11 @@ header {
     -moz-transition: all 0.4s ease;
 }
 
+.navbar-brand {
+    visibility: collapse;
+    width: 0;
+    color: red;
+}
 
 /*header.sticky {
         line-height: 68px;
@@ -71,9 +76,9 @@ header {
     font-size: 28px;
 }
 
-    #navlist.sticky {
+    /*#navlist.sticky {
         font-size: 18px;
-    }
+    }*/
 
     #navlist li {
         display: inline;
@@ -84,9 +89,9 @@ header {
         text-align: center;
     }
 
-        #navlist li.sticky {
+        /*#navlist li.sticky {
             line-height: 68px;
-        }
+        }*/
 
 
         #navlist li > div {
@@ -102,7 +107,7 @@ header {
                 /*transition: all 0.4s ease;
                 -webkit-transition: all 0.4s ease;
                 -moz-transition: all 0.4s ease;*/
-                cursor:pointer;
+                cursor: pointer;
             }
 
                 #navlist li > div > a.emphasized {
@@ -208,44 +213,47 @@ button:focus {
     outline: 0;
 }
 
-a:hover
-{
-    text-decoration:none;
-    }
+a:hover {
+    text-decoration: none;
+}
 
 /*Small Screens (Phones)*/
 @media (max-width: 768px) {
 
     .navbar-brand {
         visibility: visible;
+        width: auto;
     }
 
     .navBarFixed {
         height: auto;
         background-color: #070716;
         opacity: 1;
+        padding:0px;
     }
 
     .navBarContainer {
-        padding: 0;
+        padding: 0px;
         height: auto;
         line-height: none;
     }
 
     #navlist li a {
         line-height: 48px;
-        /*background-color:pink;*/
         font-size: 18px;
     }
 
+    .navbar-header{
+        margin:0;
+    }
+
     #navlist {
-        /*background-color: aquamarine;*/
         width: 100%;
         margin: 0;
+        background-color:black;
     }
 
     .navbar-toggle {
-        /*background-color: pink;*/
     }
 
     #navlist li {
@@ -255,11 +263,13 @@ a:hover
         padding-right: 0px;
         line-height: normal;
         text-align: center;
+
     }
 
-    #myNavBar {
+    #myNavbar {
         margin: 0px;
-        padding: 0;
-        background-color: #070716;
+        padding: 0px;
+        /*background-color: #070716;*/
+        background-color:black;
     }
 }
