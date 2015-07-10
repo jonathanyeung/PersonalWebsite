@@ -32,7 +32,6 @@ header {
 }
 
 
-
 /*header.sticky {
         line-height: 68px;
         height: 68px;
@@ -212,4 +211,55 @@ button:focus {
 a:hover
 {
     text-decoration:none;
+    }
+
+/*Small Screens (Phones)*/
+@media (max-width: 768px) {
+
+    .navbar-brand {
+        visibility: visible;
+    }
+
+    .navBarFixed {
+        height: auto;
+        background-color: #070716;
+        opacity: 1;
+    }
+
+    .navBarContainer {
+        padding: 0;
+        height: auto;
+        line-height: none;
+    }
+
+    #navlist li a {
+        line-height: 48px;
+        /*background-color:pink;*/
+        font-size: 18px;
+    }
+
+    #navlist {
+        /*background-color: aquamarine;*/
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-toggle {
+        /*background-color: pink;*/
+    }
+
+    #navlist li {
+        display: inline;
+        list-style-type: none;
+        padding-left: 0px;
+        padding-right: 0px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    #myNavBar {
+        margin: 0px;
+        padding: 0;
+        background-color: #070716;
+    }
 }

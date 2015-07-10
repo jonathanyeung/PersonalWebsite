@@ -42,10 +42,3 @@
 
     carousel.initialize();
 });
-
-
-
-//$('#SkillsNavBarLi').removeClass("emphasized");
-//$('#ExperienceNavBarLi').removeClass("emphasized");
-//$('#projectsNavBarLi').removeClass("emphasized");
-//$('#contactNavBarLi').removeClass("emphasized");
