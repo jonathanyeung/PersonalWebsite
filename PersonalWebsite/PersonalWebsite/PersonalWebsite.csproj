@@ -108,6 +108,7 @@
     <Content Include="CSS\ContactStyles.css" />
     <Content Include="CSS\ExperienceStyles.css" />
     <Content Include="CSS\MainPage.css" />
+    <Content Include="CSS\NavBar.css" />
     <Content Include="CSS\ProjectsStyles.css" />
     <Content Include="CSS\SkillsStyles.css" />
     <Content Include="Global.asax" />

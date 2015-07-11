@@ -16,7 +16,6 @@
     });
 
     $('#ExperienceNavBarLi').click(function () {
-        //document.getElementById('ExperienceSection').scrollIntoView();
         $('html, body').animate({
             scrollTop: document.getElementById('ExperienceSection').offsetTop - stickyHeaderHeight
         }, { duration: 1000, queue: false });

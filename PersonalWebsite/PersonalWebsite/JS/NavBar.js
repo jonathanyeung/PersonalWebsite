@@ -3,9 +3,76 @@
     Body: 1
 }
 
+windowWidthEnum = {
+    sm: 0,
+    lg: 1
+}
+
 liAnimationState = {
     On: 0,
     Off: 1
+}
+
+var navBarState = {
+    small: 0, // Phone Sized
+    large: 1, // Greater than phone sized
+    top: 2 // Screen Large, and Scroll Viewport at the very top
+}
+
+curCssState = navBarState.top;
+
+function changeCssState(navBarState) {
+
+    switch (curCssState) {
+        case 0:
+            $(".navbar-brand").removeClass("sm");
+            $(".navBarFixed").removeClass("sm");
+            $(".navBarContainer").removeClass("sm");
+            $("#navlist li a").removeClass("sm");
+            $(".navbar-header").removeClass("sm");
+            $("#navlist").removeClass("sm");
+            $("#navlist li").removeClass("sm");
+            $("#myNavbar").removeClass("sm");
+
+        case 1:
+            $(".navBarFixed").removeClass("lg");
+            $(".navbar-brand").removeClass("lg");
+            $("#navlist li").removeClass("lg");
+
+        case 2:
+            $(".navBarFixed").removeClass("top");
+            $(".navbar-brand").removeClass("top");
+            $("#navlist li").removeClass("top");
+    }
+
+    curCssState = navBarState;
+
+    switch (navBarState) {
+        case 0:
+            $(".navbar-brand").addClass("sm");
+            $(".navBarFixed").addClass("sm");
+            $(".navBarContainer").addClass("sm");
+            $("#navlist li a").addClass("sm");
+            $(".navbar-header").addClass("sm");
+            $("#navlist").addClass("sm");
+            $("#navlist li").addClass("sm");
+            $("#myNavbar").addClass("sm");
+            break;
+        case 1:
+            $(".navBarFixed").addClass("lg");
+            $(".navbar-brand").addClass("lg");
+            $("#navlist li").addClass("lg");
+            break;
+
+        case 2:
+            $(".navBarFixed").addClass("top");
+            $(".navbar-brand").addClass("top");
+            $("#navlist li").addClass("top");
+            $("#navlist").addClass("top");
+            break;
+        default:
+            throw EventException;
+    }
 }
 
 var skillsAnimState = false;
@@ -24,6 +91,8 @@ var navbarAtTopFontSize = "28px";
 var lastSection = 0;
 
 var currentWindowPosition = windowPositionEnum.Top;
+
+var currentWindowWidth = windowWidthEnum.lg;
 
 //
 // Deemphasizes the section header in the navbar, if in the necessary state.
@@ -69,8 +138,23 @@ function navListDeemphasize() {
 $(window).scroll(function () {
 
     //Don't do any animations on the phone size.
-    if (window.innerWidth < 768)
-    {
+    //if (window.innerWidth < 768) {
+    //    return;
+    //}
+
+    //if ($(this).scrollTop() > 1) {
+
+    //    changeCssState(navBarState.large);
+    //}
+
+    //else if ($(this).scrollTop() <= 1) {
+
+    //    changeCssState(navBarState.top);
+    //}
+
+
+    //Don't do any animations on the phone size.
+    if (window.innerWidth < 768) {
         return;
     }
 
@@ -82,9 +166,17 @@ $(window).scroll(function () {
 
         currentWindowPosition = windowPositionEnum.Body;
 
-        $("#navlist a").animate({
-            "font-size": deemphasizedFontSize
-        }, { duration: animationDuration, queue: false });
+        $("#navlist a").animate(
+            {
+                "font-size": deemphasizedFontSize
+            },
+            {
+                duration: animationDuration, queue: false,
+                complete: function () {
+                    changeCssState(navBarState.large);
+                }
+            }
+        );
 
         $("#navlist li").animate({
             "line-height": "68px"
@@ -106,10 +198,19 @@ $(window).scroll(function () {
             "height": "108px"
         }, { duration: animationDuration, queue: false });
 
-        $('#navlist a').animate({
-            color: "white",
-            "font-size": navbarAtTopFontSize
-        }, { duration: animationInDuration, queue: false });
+        $('#navlist a').animate(
+            {
+                color: "white",
+                "font-size": navbarAtTopFontSize
+            },
+            {
+                duration: animationInDuration,
+                queue: false,
+                complete: function () {
+                    changeCssState(navBarState.top);
+                }
+            }
+        );
     }
 
     if ($(this).scrollTop() >= $('#SkillsSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
@@ -134,8 +235,7 @@ $(window).scroll(function () {
         currentSection = 0;
     }
 
-    if (lastSection != currentSection)
-    {
+    if (lastSection != currentSection) {
         lastSection = currentSection;
 
         if (currentSection == 1) {
@@ -175,5 +275,19 @@ $(window).scroll(function () {
                 "font-size": emphasizedFontSize
             }, { duration: animationInDuration, queue: false });
         }
+    }
+});
+
+$(window).resize(function () {
+
+    if (currentWindowWidth == windowWidthEnum.lg && window.innerWidth < 768) {
+        currentWindowWidth = windowWidthEnum.sm;
+        changeCssState(navBarState.small);
+        return;
+    }
+    else if (currentWindowWidth == windowWidthEnum.sm && window.innerWidth > 768) {
+        currentWindowWidth = windowWidthEnum.lg;
+        changeCssState(navBarState.large);
+        return;
     }
 });
