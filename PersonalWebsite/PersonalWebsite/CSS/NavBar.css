@@ -24,7 +24,7 @@
         #navlist li > div > a {
             display: table-cell;
             color: white;
-            opacity: .6;
+            opacity: .8;
             cursor: pointer;
         }
 
@@ -45,7 +45,7 @@
     width: 0;
 }
 
-#navlist li.lg {
+#navlist li a.lg {
     display: inline;
     list-style-type: none;
     padding-left: 20px;
@@ -54,6 +54,7 @@
     text-align: center;
     font-size: 18px;
 }
+
 
 /*#endregion Medium+ Screen Size*/
 
@@ -64,10 +65,10 @@
 }
 
 #navlist.top {
-    font-size: 28px;
+    font-size: 24px;
 }
 
-#navlist li.top {
+#navlist li a.top {
     display: inline;
     list-style-type: none;
     padding-left: 20px;
@@ -96,18 +97,18 @@
     background-color: #070716;
     opacity: 1;
     padding: 0px;
-    height: 68px;
+    height: 68px !important;
 }
 
-.navBarContainer.sm {
+/*.navBarContainer.sm {
     padding: 0px;
     height: auto;
     line-height: none;
-}
+}*/
 
 #navlist li a.sm {
-    line-height: 48px;
-    font-size: 18px;
+    line-height: 48px !important;
+    font-size: 18px !important;
 }
 
 .navbar-header.sm {
@@ -117,7 +118,8 @@
 #navlist.sm {
     width: 100%;
     margin: 0;
-    background-color: black;
+    background-color: #070716;
+    padding-left: 20px;
 }
 
 #navlist li.sm {
@@ -132,14 +134,8 @@
 #myNavbar.sm {
     margin: 0px;
     padding: 0px;
-    /*background-color: #070716;*/
-    background-color: black;
 }
 
 
 /*#endregion Small Screen Size*/
 
-#navlist li > div > a.emphasized {
-    color: #335C7D;
-    font-size: 20px;
-}

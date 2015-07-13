@@ -16,58 +16,76 @@ liAnimationState = {
 var navBarState = {
     small: 0, // Phone Sized
     large: 1, // Greater than phone sized
-    top: 2 // Screen Large, and Scroll Viewport at the very top
+    top: 2, // Screen Large, and Scroll Viewport at the very top
+    uninitialized: 3
 }
 
-curCssState = navBarState.top;
+curCssState = navBarState.uninitialized;
+
+function initializeCssState() {
+    if (window.innerWidth < 768) {
+        changeCssState(navBarState.small);
+    }
+    else {
+        changeCssState(navBarState.top);
+    }
+}
 
 function changeCssState(navBarState) {
+
+    if (curCssState == navBarState) {
+        return;
+    }
 
     switch (curCssState) {
         case 0:
             $(".navbar-brand").removeClass("sm");
             $(".navBarFixed").removeClass("sm");
-            $(".navBarContainer").removeClass("sm");
-            $("#navlist li a").removeClass("sm");
             $(".navbar-header").removeClass("sm");
             $("#navlist").removeClass("sm");
             $("#navlist li").removeClass("sm");
             $("#myNavbar").removeClass("sm");
+            $("#navlist li a").removeClass("sm");
+            break;
 
         case 1:
             $(".navBarFixed").removeClass("lg");
             $(".navbar-brand").removeClass("lg");
-            $("#navlist li").removeClass("lg");
+            $("#navlist li a").removeClass("lg");
+            break;
 
         case 2:
             $(".navBarFixed").removeClass("top");
             $(".navbar-brand").removeClass("top");
-            $("#navlist li").removeClass("top");
+            $("#navlist li a").removeClass("top");
+            $("navlist").removeClass("top");
+            break;
     }
 
     curCssState = navBarState;
 
     switch (navBarState) {
         case 0:
+
             $(".navbar-brand").addClass("sm");
             $(".navBarFixed").addClass("sm");
-            $(".navBarContainer").addClass("sm");
-            $("#navlist li a").addClass("sm");
             $(".navbar-header").addClass("sm");
             $("#navlist").addClass("sm");
             $("#navlist li").addClass("sm");
             $("#myNavbar").addClass("sm");
+            $("#navlist li a").addClass("sm");
             break;
+
         case 1:
             $(".navBarFixed").addClass("lg");
             $(".navbar-brand").addClass("lg");
-            $("#navlist li").addClass("lg");
+            $("#navlist li a").addClass("lg");
             break;
 
         case 2:
             $(".navBarFixed").addClass("top");
             $(".navbar-brand").addClass("top");
-            $("#navlist li").addClass("top");
+            $("#navlist li a").addClass("top");
             $("#navlist").addClass("top");
             break;
         default:
@@ -86,7 +104,9 @@ var animationDuration = 400;
 
 var emphasizedFontSize = "20px";
 var deemphasizedFontSize = "18px";
-var navbarAtTopFontSize = "28px";
+var navbarAtTopFontSize = "24px";
+
+var emphasizedColor = "#5A7D9B";
 
 var lastSection = 0;
 
@@ -136,92 +156,96 @@ function navListDeemphasize() {
 }
 
 $(window).scroll(function () {
+    //Don't do the navbar animations on the phone size.
+    if (window.innerWidth >= 768) {
 
-    //Don't do any animations on the phone size.
-    //if (window.innerWidth < 768) {
-    //    return;
-    //}
+        // Change the appearance of the navbar if @ the top of the page
+        if ($(this).scrollTop() > 1 && currentWindowPosition == windowPositionEnum.Top) {
 
-    //if ($(this).scrollTop() > 1) {
+            currentWindowPosition = windowPositionEnum.Body;
 
-    //    changeCssState(navBarState.large);
-    //}
+            $("#navlist a").animate(
+                {
+                    "font-size": deemphasizedFontSize
+                },
+                {
+                    duration: animationDuration, queue: false,
+                    complete: function () {
+                        changeCssState(navBarState.large);
+                    }
+                }
+            );
 
-    //else if ($(this).scrollTop() <= 1) {
+            $("#navlist li a").animate({
+                "line-height": "68px"
+            }, { duration: animationDuration, queue: false });
 
-    //    changeCssState(navBarState.top);
-    //}
+            $(".navBarFixed").animate({
+                "height": "68px"
+            }, { duration: animationDuration, queue: false });
+        }
+        else if ($(this).scrollTop() <= 1 && currentWindowPosition == windowPositionEnum.Body) {
 
+            currentWindowPosition = windowPositionEnum.Top;
 
-    //Don't do any animations on the phone size.
-    if (window.innerWidth < 768) {
-        return;
+            $("#navlist li a").animate({
+                "line-height": "108px"
+            }, { duration: animationDuration, queue: false });
+
+            $(".navBarFixed").animate({
+                "height": "108px"
+            }, { duration: animationDuration, queue: false });
+
+            $("#navlist li a").animate({
+                "padding-left": "20px"
+            }, { duration: animationDuration, queue: false });
+
+            $("#navlist li a").animate({
+                "padding-right": "20px"
+            }, { duration: animationDuration, queue: false });
+
+            $('#navlist a').animate(
+                {
+                    color: "white",
+                    "font-size": navbarAtTopFontSize
+                },
+                {
+                    duration: animationInDuration,
+                    queue: false,
+                    complete: function () {
+                        changeCssState(navBarState.top);
+                    }
+                }
+            );
+        }
     }
 
-    //ToDo: Look up enums in JavaScript
     var scrollEpsilon = 3;
+
+    var emphasizedFontSize = "20px";
+    var navBarHeight;
+
+    if (window.innerWidth < 768) {
+        emphasizedFontSize = "18px";
+        // To Do: Figure out why this doesn't work:
+        //navBarHeight = $('#navbar-header').height();
+        navBarHeight = 70;
+    }
+    else {
+        navBarHeight = $('#navlist li').height();
+    }
+
     var currentSection = 0;
 
-    if ($(this).scrollTop() > 1 && currentWindowPosition == windowPositionEnum.Top) {
-
-        currentWindowPosition = windowPositionEnum.Body;
-
-        $("#navlist a").animate(
-            {
-                "font-size": deemphasizedFontSize
-            },
-            {
-                duration: animationDuration, queue: false,
-                complete: function () {
-                    changeCssState(navBarState.large);
-                }
-            }
-        );
-
-        $("#navlist li").animate({
-            "line-height": "68px"
-        }, { duration: animationDuration, queue: false });
-
-        $(".navBarFixed").animate({
-            "height": "68px"
-        }, { duration: animationDuration, queue: false });
-    }
-    else if ($(this).scrollTop() <= 1 && currentWindowPosition == windowPositionEnum.Body) {
-
-        currentWindowPosition = windowPositionEnum.Top;
-
-        $("#navlist li").animate({
-            "line-height": "108px"
-        }, { duration: animationDuration, queue: false });
-
-        $(".navBarFixed").animate({
-            "height": "108px"
-        }, { duration: animationDuration, queue: false });
-
-        $('#navlist a').animate(
-            {
-                color: "white",
-                "font-size": navbarAtTopFontSize
-            },
-            {
-                duration: animationInDuration,
-                queue: false,
-                complete: function () {
-                    changeCssState(navBarState.top);
-                }
-            }
-        );
-    }
-
-    if ($(this).scrollTop() >= $('#SkillsSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
+    if ($(this).scrollTop() >= $('#SkillsSection').offset().top - navBarHeight - scrollEpsilon) {
         currentSection = 1;
     }
 
-    if ($(this).scrollTop() >= $('#ExperienceSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
+    if ($(this).scrollTop() >= $('#ExperienceSection').offset().top - navBarHeight - scrollEpsilon) {
         currentSection = 2;
     }
 
-    if ($(this).scrollTop() >= $('#ProjectsSection').offset().top - $('#navlist li').height() - scrollEpsilon) {
+    if ($(this).scrollTop() >= $('#ProjectsSection').offset().top - navBarHeight - scrollEpsilon) {
         currentSection = 3;
     }
 
@@ -231,7 +255,7 @@ $(window).scroll(function () {
         currentSection = 4;
     }
 
-    if ($(this).scrollTop() < $('#SkillsSection').offset().top - $('#navlist li').height()) {
+    if ($(this).scrollTop() < $('#SkillsSection').offset().top - navBarHeight) {
         currentSection = 0;
     }
 
@@ -244,7 +268,7 @@ $(window).scroll(function () {
             skillsAnimState = true;
 
             $('#SkillsNavBarLi a').animate({
-                color: "#335C7D",
+                color: emphasizedColor,
                 "font-size": emphasizedFontSize
             }, { duration: animationInDuration, queue: false });
         }
@@ -253,7 +277,7 @@ $(window).scroll(function () {
             navListDeemphasize();
             experiencesAnimState = true;
             $('#ExperienceNavBarLi a').animate({
-                color: "#335C7D",
+                color: emphasizedColor,
                 "font-size": emphasizedFontSize
             }, { duration: animationInDuration, queue: false });
         }
@@ -262,7 +286,7 @@ $(window).scroll(function () {
             navListDeemphasize();
             projectsAnimState = true;
             $('#projectsNavBarLi a').animate({
-                color: "#335C7D",
+                color: emphasizedColor,
                 "font-size": emphasizedFontSize
             }, { duration: animationInDuration, queue: false });
         }
@@ -271,11 +295,12 @@ $(window).scroll(function () {
             navListDeemphasize();
             contactAnimState = true;
             $('#contactNavBarLi a').animate({
-                color: "#335C7D",
+                color: emphasizedColor,
                 "font-size": emphasizedFontSize
             }, { duration: animationInDuration, queue: false });
         }
     }
+
 });
 
 $(window).resize(function () {
@@ -283,11 +308,23 @@ $(window).resize(function () {
     if (currentWindowWidth == windowWidthEnum.lg && window.innerWidth < 768) {
         currentWindowWidth = windowWidthEnum.sm;
         changeCssState(navBarState.small);
+
+        // Make the navbar menu disappear when a li is clicked, but only on phone-size.
+        $('#myNavbar a').attr({ "data-toggle": "collapse", "data-target": "#myNavbar" });
+
         return;
     }
     else if (currentWindowWidth == windowWidthEnum.sm && window.innerWidth > 768) {
         currentWindowWidth = windowWidthEnum.lg;
-        changeCssState(navBarState.large);
+
+        if ($(this).scrollTop() > 1) {
+            changeCssState(navBarState.large);
+        }
+        else {
+            changeCssState(navBarState.top);
+        }
+
+        $('#myNavbar a').removeAttr("data-toggle data-target");
         return;
     }
 });

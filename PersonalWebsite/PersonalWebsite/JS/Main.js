@@ -12,7 +12,14 @@
     $('#SkillsNavBarLi').click(function () {
         $('html, body').animate({
             scrollTop: document.getElementById('SkillsSection').offsetTop - stickyHeaderHeight
-        }, {duration: 1000, queue:false});
+        }, { duration: 1000, queue: false });
+
+//        $('#myNavbar').slideUp(400,
+//        function () {
+//    $('#myNavbar').css("display", "normal");
+//}
+        //);
+
     });
 
     $('#ExperienceNavBarLi').click(function () {
@@ -40,4 +47,6 @@
     });
 
     carousel.initialize();
+
+    initializeCssState();
 });
