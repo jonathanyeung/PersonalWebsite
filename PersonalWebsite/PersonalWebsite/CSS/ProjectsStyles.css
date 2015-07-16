@@ -1,10 +1,79 @@
 ﻿.projectCarousel {
-    width: 1000px;
+    width: 100%;
+    max-width: 1100px;
     height: 500px;
     position: relative;
-    display:table;
-    margin:auto;
+    display: table;
+    margin: auto;
     margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carouselBackground {
+    width: calc(100% - 100px);
+    max-width: 1000px;
+    height: 500px;
+    position: absolute;
+    margin-top: 20px;
+    left: 50px;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#carouselContent {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.carouselItem {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+.picture {
+    float: left;
+    /*width: 300px;*/
+    vertical-align: central;
+    margin-left: 8%;
+    margin-right: 5%;
+    overflow: visible;
+}
+
+.content {
+    vertical-align: central;
+    text-align: left;
+    max-width: 600px;
+    display: table-cell;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contentContainer {
+    display: table;
+    vertical-align: central;
+    margin-left: 50px;
+    margin-top: 8%;
+    margin-right: 3%;
+}
+
+.leftContentContainer {
+    float: left;
+    display: table;
+    vertical-align: central;
+    margin-top: 7%;
+    margin-left: 8%;
+    width: 42%;
 }
 
 .prevButton, .nextButton {
@@ -15,87 +84,121 @@
     color: white;
     border-width: 0px;
     top: 20px;
+    padding: 0;
 }
 
-.prevButton p{
-    font-size:40px;
+    .prevButton p, .nextButton p {
+        font-size: 40px;
+    }
+
+.prevButton {
+    left: 50px;
 }
 
-.nextButton p{
-    font-size:40px;
-}
-
-.pan {
-    width: 10000px;
-}
-
-#carouselContent {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    max-width: 100%;
-}
-
-#wrapper {
-    width: 1000px;
-    height: 550px;
-}
-
-.carouselItem {
-    position: relative;
-    float: left;
-    width: 1000px;
-    height: 550px;
-}
-
-.picture {
-    float: left;
-    width: 300px;
-    vertical-align: central;
-    margin-left: 7%;
-    margin-right: 5%;
-    overflow: visible;
+.nextButton {
+    right: 50px;
 }
 
 .rightPicture {
-    width: 300px;
-    vertical-align: central;
-    margin-right: 7%;
+    width: 42%;
     float: left;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
-.content {
-    vertical-align: central;
-    text-align: left;
-    width: 600px;
-    display: table-cell;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#OzwegoCarousel {
+    height: 0;
+    visibility: collapse;
+}
+
+#PointReaderCarousel {
+    height: 0;
+    visibility: collapse;
+}
+
+.picture img {
+    width: 100%;
+    max-width: 300px;
 }
 
 .badges {
     position: absolute;
-    right: 7%;
+    right: 8%;
     bottom: 10%;
 }
 
-.contentContainer {
-    display: table;
-    vertical-align: central;
-    margin-left: 50px;
-    margin-top: 8%;
-    margin-right: 7%;
-}
+@media (max-width: 768px) {
+    .picture img {
+        width: 100%;
+        max-width: 150px;
+    }
 
-.leftContentContainer {
-    float: left;
-    display: table;
-    vertical-align: central;
-    margin-top: 7%;
-    margin-left: 7%;
-}
+    .rightPicture img {
+        width: 100%;
+        max-width: 150px;
+    }
 
-.filler {
-    clear: left;
+    .picture {
+        position: absolute;
+        right: 0px;
+        margin: 30px;
+        margin-top: 12%;
+    }
+
+    .rightPicture {
+        position: absolute;
+        right: 0px;
+        margin: 30px;
+        margin-top: 12%;
+        width: auto;
+    }
+
+    .contentContainer {
+        margin-top: 12%;
+        float: left;
+        margin-right: 210px;
+    }
+
+    .leftContentContainer {
+        margin-top: 12%;
+        float: left;
+        margin-right: 210px;
+        width: auto;
+    }
+
+    .prevButton, .nextButton {
+        /*outline: none;*/
+        outline: thin;
+        position: absolute;
+        width: 12%;
+        height: 12%;
+        color: white;
+        border-width: 0px;
+        /*top: 20px;*/
+        line-height: 7%;
+    }
+
+        .prevButton p, .nextButton p {
+            font-size: 40px;
+        }
+
+    .nextButton {
+        left: calc(50px + 12%);
+    }
+
+    .projectCarousel {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carouselBackground {
+        width: calc(100% - 40px);
+        left: 20px;
+    }
+
+
+    .badges {
+        position: absolute;
+        right: 30px;
+        bottom: 10%;
+    }
 }

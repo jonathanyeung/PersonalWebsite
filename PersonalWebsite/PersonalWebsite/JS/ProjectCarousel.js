@@ -4,9 +4,27 @@
     itemCount: 3,
 
     setCarouselOffset: function (offsetIndex) {
-        var newMargin = this.currentPosition * (-1) * this.carouselWidth;
-        $(".pan").css("margin-left", newMargin);
+        switch (this.currentPosition) {
+            case 0:
+                $("#PointReaderCarousel").css({ "height": 0, "visibility": "collapse" });
+                $("#OzwegoCarousel").css({ "height": 0, "visibility": "collapse" });
+                $("#GuruCarousel").css({ "height": "550px", "visibility": "visible" });
+                break;
+
+            case 1:
+                $("#GuruCarousel").css({ "height": 0, "visibility": "collapse" });
+                $("#PointReaderCarousel").css({ "height": 0, "visibility": "collapse" });
+                $("#OzwegoCarousel").css({ "height": "550px", "visibility": "visible" });
+                break;
+
+            case 2:
+                $("#GuruCarousel").css({ "height": 0, "visibility": "collapse" });
+                $("#OzwegoCarousel").css({ "height": 0, "visibility": "collapse" });
+                $("#PointReaderCarousel").css({ "height": "550px", "visibility": "visible" });
+                break;
+        }
     },
+
 
     next: function () {
         this.currentPosition = (this.currentPosition + 1) % this.itemCount;

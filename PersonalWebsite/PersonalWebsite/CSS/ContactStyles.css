@@ -1,5 +1,19 @@
-﻿.contactSubText{
-    color:white;
-    font-family:"Open Sans", sans-serif;
-    font-size:14px;
+﻿.contactSubText {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+}
+
+#contactLinks li {
+    display: inline;
+    list-style-type: none;
+    padding-right:40px;
+}
+
+#contactLinks {
+    padding-right:0px;
+}
+
+#contactLinks img {
+    height: 40px;
 }

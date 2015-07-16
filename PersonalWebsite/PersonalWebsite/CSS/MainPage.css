@@ -1,5 +1,5 @@
 ﻿body {
-    /*overflow-x:hidden;*/
+    overflow-x:hidden;
 }
 
 .hatch-background {
@@ -15,7 +15,7 @@
     height: 50px;
 }
 
-header {
+/*header {
     position: fixed;
     width: 100%;
     text-align: center;
@@ -29,49 +29,9 @@ header {
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
-}
-
-.awesomeNav {
-    text-align: center;
-    background: black;
-    opacity: .6;
-    font-size: 28px;
-    line-height: 108px;
-    height: 108px;
-        font-family: 'Open Sans', sans-serif;
-}
-
-header.sticky {
-    line-height: 68px;
-    height: 68px;
-    font-size: 18px;
-    opacity: .8;
-}
-
-#navlist {
-    text-align: center;
-}
+}*/
 
 
-    #navlist li {
-        display: inline;
-        list-style-type: none;
-        padding: 20px;
-        transition: all 0.4s ease;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
-    }
-
-        #navlist li.emphasized {
-            color: #335C7D;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-.navlistButton {
-    border: hidden;
-    background: transparent;
-}
 
 #headerName {
     font-size: 60px;
@@ -132,6 +92,7 @@ header.sticky {
 
 .section-content {
     text-align: center;
+    margin-bottom: 100px;
 }
 
 /*Used to darken a background image to de-emphasize it.*/
@@ -157,10 +118,20 @@ header.sticky {
     background-color: #4bc8de;
 }
 
-.dark-accent-color{
+.dark-accent-color {
     background-color: #070716;
 }
 
-button:focus{
+button:focus {
     outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*Small Screens (Phones)*/
+@media (max-width: 768px) {
+
+ 
 }
