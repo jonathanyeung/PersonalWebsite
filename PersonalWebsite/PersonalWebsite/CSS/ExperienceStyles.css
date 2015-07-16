@@ -31,8 +31,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.timelineDescriptionBottomMargin {
+.timelineDescriptionMargins {
     margin-bottom: 50px;
+    margin-right: 20px;
 }
 
 .timelineDescriptionHeader {
@@ -84,8 +85,6 @@
 
 
 @media (max-width: 768px) {
-
-
 
     .timelineDescription {
         margin-left: 40px;

@@ -1,5 +1,5 @@
 ﻿body {
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .hatch-background {
@@ -14,24 +14,6 @@
     background-color: lightgreen;
     height: 50px;
 }
-
-/*header {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    font-size: 28px;
-    line-height: 108px;
-    height: 108px;
-    background: black;
-    opacity: .6;
-    font-family: 'Open Sans', sans-serif;
-    z-index: 100;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-}*/
-
-
 
 #headerName {
     font-size: 60px;
@@ -81,6 +63,7 @@
 .section-Titles {
     font-family: "Open Sans", sans-serif;
     margin-top: 50px;
+    font-size: 36px;
     font-weight: 500;
 }
 
@@ -132,6 +115,32 @@ a:hover {
 
 /*Small Screens (Phones)*/
 @media (max-width: 768px) {
+    #headerName {
+        font-size: 40px;
+    }
 
- 
+    #headerSubtext {
+        font-size: 18px;
+    }
+
+    .cover-image-container {
+        height: 500px;
+    }
+
+    .section-Titles {
+        font-family: "Open Sans", sans-serif;
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .section-Subtitles {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    /*​ .section-Header {
+        margin-bottom: 50px;
+    }*/
 }
