@@ -41,5 +41,7 @@
 
     carousel.initialize();
 
-    initializeCssState();
+    initializeNavBar();
+
+    // Add attributes 
 });

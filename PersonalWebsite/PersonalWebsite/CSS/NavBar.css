@@ -32,6 +32,16 @@
     border: hidden;
     background: transparent;
 }
+
+.navbar-brand{
+    margin-left:20px;
+    padding:0;
+}
+
+.navbar-toggle{
+    margin-top:17px;
+}
+
 /*#endregion Default Styling*/
 
 /*#region Medium+ Screen Size */
@@ -90,6 +100,7 @@
 .navbar-brand.sm {
     visibility: visible;
     width: auto;
+    line-height:68px;
 }
 
 .navBarFixed.sm {
@@ -98,6 +109,7 @@
     opacity: 1;
     padding: 0px;
     height: 68px !important;
+    overflow:visible;
 }
 
 /*.navBarContainer.sm {
@@ -113,6 +125,8 @@
 
 .navbar-header.sm {
     margin: 0;
+    height:68px;
+   
 }
 
 #navlist.sm {

@@ -114,6 +114,21 @@ var currentWindowPosition = windowPositionEnum.Top;
 
 var currentWindowWidth = windowWidthEnum.lg;
 
+function initializeNavBar()
+{
+    initializeCssState();
+
+    if (window.innerWidth < 768)
+    {
+        currentWindowWidth = windowWidthEnum.sm;
+        $('#myNavbar a').attr({ "data-toggle": "collapse", "data-target": "#myNavbar" });
+    }
+    else
+    {
+        currentWindowWidth = windowWidthEnum.lg;
+    }
+}
+
 //
 // Deemphasizes the section header in the navbar, if in the necessary state.
 //
@@ -325,6 +340,7 @@ $(window).resize(function () {
         }
 
         $('#myNavbar a').removeAttr("data-toggle data-target");
+
         return;
     }
 });
