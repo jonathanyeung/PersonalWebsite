@@ -1,0 +1,698 @@
+﻿/*#region Main Styles */
+
+body {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.hatch-background {
+    background-image: url(../Images/pattern-grid@1x.jpg);
+    background-repeat: repeat;
+    background-size: 18px 18px;
+}
+
+.column-reference {
+    text-align: center;
+    background-color: lightgreen;
+    height: 50px;
+}
+
+#headerName {
+    font-size: 60px;
+}
+
+#headerSubtext {
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+#cover-image-content {
+    position: absolute;
+    top: 160px;
+    width: 800px;
+    margin-left: -400px;
+    left: 50%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.cover-image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-image: url("../Images/SkylineForWebsite.jpg");
+    background-position: 50% 20%;
+    margin: 0 auto;
+}
+
+    .cover-image-container img.wide {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+    }
+
+    .cover-image-container img.tall {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+    }
+
+​ .section-Header {
+    margin-bottom: 100px;
+}
+
+.section-Titles {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 50px;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.section-Subtitles {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section-content {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/*Used to darken a background image to de-emphasize it.*/
+.darken-image-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+
+.accent-button {
+    color: white;
+    background-color: #4bc8de;
+    border-width: 0px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 20px 10px 20px;
+}
+
+.accent-color {
+    background-color: #4bc8de;
+}
+
+.dark-accent-color {
+    background-color: #070716;
+}
+
+button:focus {
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*Small Screens (Phones)*/
+@media (max-width: 768px) {
+    #headerName {
+        font-size: 40px;
+    }
+
+    #headerSubtext {
+        font-size: 18px;
+    }
+
+    .cover-image-container {
+        height: 500px;
+    }
+
+    .section-Titles {
+        font-family: "Open Sans", sans-serif;
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .section-Subtitles {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+
+/*#endregion */
+
+/*#region NavBar Styles */
+
+
+.navBarFixed {
+    background-color: black;
+    height: 108px;
+    margin-bottom: 0px;
+    opacity: .8;
+}
+
+#myNavBar {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#navlist {
+    display: inline-block;
+    float: none;
+}
+
+    #navlist li > div {
+        display: table;
+        vertical-align: middle;
+    }
+
+        #navlist li > div > a {
+            display: table-cell;
+            color: white;
+            opacity: .8;
+            cursor: pointer;
+        }
+
+.navlistButton {
+    border: hidden;
+    background: transparent;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+    padding: 0;
+}
+
+.navbar-toggle {
+    margin-top: 17px;
+}
+
+/* Medium+ Screen Size */
+
+.navBarFixed.lg {
+    height: 68px;
+}
+
+.navbar-brand.lg {
+    visibility: collapse;
+    width: 0;
+}
+
+#navlist li a.lg {
+    display: inline;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 68px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Medium+ Screen Size, ViewPort @ Top*/
+
+.navBarFixed.top {
+    height: 108px;
+}
+
+#navlist.top {
+    font-size: 24px;
+}
+
+#navlist li a.top {
+    display: inline;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 108px;
+    text-align: center;
+}
+
+.navbar-brand.top {
+    visibility: collapse;
+    width: 0;
+}
+
+/* Small Screen Size*/
+.navbar-brand.sm {
+    visibility: visible;
+    width: auto;
+    line-height: 68px;
+}
+
+.navBarFixed.sm {
+    height: auto;
+    background-color: #070716;
+    opacity: 1;
+    padding: 0px;
+    height: 68px !important;
+    overflow: visible;
+}
+
+#navlist li a.sm {
+    line-height: 48px !important;
+    font-size: 18px !important;
+}
+
+.navbar-header.sm {
+    margin: 0;
+    height: 68px;
+}
+
+#navlist.sm {
+    width: 100%;
+    margin: 0;
+    background-color: #070716;
+    padding-left: 20px;
+}
+
+#navlist li.sm {
+    display: inline;
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    line-height: normal;
+    text-align: center;
+}
+
+#myNavbar.sm {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*#endregion */
+
+/*#region Skill Styles */
+
+
+#SkillsSection h5 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#SkillsSection p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.skills-styles {
+    background-image: url(../Images/pattern-grid@1x.jpg);
+    background-repeat: repeat;
+    background-color: red;
+    background-size: 18px 18px;
+}
+
+.skills-circle {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    background-color: #4bc8de;
+    margin: 1em;
+    text-align: center;
+}
+
+.skills-circle-content {
+    color: white;
+    vertical-align: middle;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+/*#endregion */
+
+/*#region Experience Styles */
+
+
+
+#timelineContainer {
+    align-content: center;
+}
+
+.timelineEntry {
+    float: left;
+    padding-right: 20px;
+    vertical-align: middle;
+    margin-top: 4px;
+}
+
+.timelineEntryHeading {
+    font-size: large;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.timelineEntryDate {
+    font-size: small;
+    font-weight: 400;
+    opacity: .7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timelineDescription {
+    float: left;
+    padding-left: 30px;
+    border-left: thick solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timelineDescriptionMargins {
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+.timelineDescriptionHeader {
+    font-size: x-large;
+    text-align: left;
+}
+
+.timelineDescriptionSubheader {
+    font-size: small;
+    opacity: .7;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.timelineDescriptionContent {
+    text-align: left;
+}
+
+.eventImage {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: -17px;
+    background-color: white;
+    border-width: 5px;
+    border-color: white;
+    border-style: solid;
+    z-index: 10;
+    left: 25%;
+}
+
+
+.rocketImage {
+    float: left;
+    width: 200px;
+    margin-left: -130px;
+    margin-top: -120px;
+    margin-bottom: 60px;
+}
+
+#theFuture {
+    z-index: 10;
+    margin-top: 5px;
+}
+
+.navbar-brand {
+    visibility: collapse;
+}
+
+
+@media (max-width: 768px) {
+
+    .timelineDescription {
+        margin-left: 40px;
+    }
+
+    .timelineEntry {
+        margin-left: 40px;
+        border-left: thick solid black;
+        text-align: left;
+    }
+
+    .timelineEntryHeading {
+        margin-left: 10px;
+    }
+
+    .timelineEntryDate {
+        margin-left: 10px;
+    }
+
+    .eventImage {
+        left: 40px;
+    }
+
+    .rocketImage {
+        margin-top: -140px;
+    }
+
+    #theFuture {
+        margin-left: 80px;
+        position: absolute;
+    }
+}
+
+
+/*#endregion */
+
+/*#region Project Styles */
+
+.projectCarousel {
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    position: relative;
+    display: table;
+    margin: auto;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carouselBackground {
+    width: calc(100% - 100px);
+    max-width: 1000px;
+    height: 500px;
+    position: absolute;
+    margin-top: 20px;
+    left: 50px;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#carouselContent {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.carouselItem {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+.picture {
+    float: left;
+    vertical-align: central;
+    margin-left: 8%;
+    margin-right: 5%;
+    overflow: visible;
+}
+
+.content {
+    vertical-align: central;
+    text-align: left;
+    max-width: 600px;
+    display: table-cell;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contentContainer {
+    display: table;
+    vertical-align: central;
+    margin-left: 50px;
+    margin-top: 8%;
+    margin-right: 3%;
+}
+
+.leftContentContainer {
+    float: left;
+    display: table;
+    vertical-align: central;
+    margin-top: 7%;
+    margin-left: 8%;
+    width: 42%;
+}
+
+.prevButton, .nextButton {
+    outline: none;
+    position: absolute;
+    width: 7%;
+    height: 500px;
+    color: white;
+    border-width: 0px;
+    top: 20px;
+    padding: 0;
+}
+
+    .prevButton p, .nextButton p {
+        font-size: 40px;
+    }
+
+.prevButton {
+    left: 50px;
+}
+
+.nextButton {
+    right: 50px;
+}
+
+.rightPicture {
+    width: 42%;
+    float: left;
+    margin-top: 7%;
+}
+
+#OzwegoCarousel {
+    height: 0;
+    visibility: collapse;
+}
+
+#PointReaderCarousel {
+    height: 0;
+    visibility: collapse;
+}
+
+.picture img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.badges {
+    position: absolute;
+    right: 8%;
+    bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .picture img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .rightPicture img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .picture {
+        position: absolute;
+        right: 0px;
+        margin: 30px;
+        margin-top: 12%;
+    }
+
+    .rightPicture {
+        position: absolute;
+        right: 0px;
+        margin: 30px;
+        margin-top: 12%;
+        width: auto;
+    }
+
+    .contentContainer {
+        margin-top: 12%;
+        float: left;
+        margin-right: 210px;
+    }
+
+    .leftContentContainer {
+        margin-top: 12%;
+        float: left;
+        margin-right: 210px;
+        width: auto;
+    }
+
+    .prevButton, .nextButton {
+        outline: thin;
+        position: absolute;
+        width: 12%;
+        height: 12%;
+        color: white;
+        border-width: 0px;
+        line-height: 7%;
+    }
+
+        .prevButton p, .nextButton p {
+            font-size: 40px;
+        }
+
+    .nextButton {
+        left: calc(50px + 12%);
+    }
+
+    .projectCarousel {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carouselBackground {
+        width: calc(100% - 40px);
+        left: 20px;
+    }
+
+
+    .badges {
+        position: absolute;
+        right: 30px;
+        bottom: 10%;
+    }
+}
+
+
+/*#endregion */
+
+/*#region Contact Styles */
+
+.contactSubText {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+}
+
+#contactLinks li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 40px;
+}
+
+#contactLinks {
+    padding-right: 0px;
+}
+
+    #contactLinks img {
+        height: 40px;
+    }
+
+/*#endregion */
