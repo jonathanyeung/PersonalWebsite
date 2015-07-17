@@ -108,7 +108,6 @@
     <Content Include="CSS\jyStyles.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\Projects\462x120_WP_Store_cyan.png" />
-    <Content Include="Images\CanyonlandsForWebsite.jpg" />
     <Content Include="Images\Contact\FB-f-Logo__blue_58.png" />
     <Content Include="Images\Contact\In-2C-54px-TM.png" />
     <Content Include="Images\Contact\Mail.png" />
