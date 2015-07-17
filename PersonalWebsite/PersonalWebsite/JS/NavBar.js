@@ -58,7 +58,7 @@ function changeCssState(navBarState) {
             $(".navBarFixed").removeClass("top");
             $(".navbar-brand").removeClass("top");
             $("#navlist li a").removeClass("top");
-            $("navlist").removeClass("top");
+            $("#navlist").removeClass("top");
             break;
     }
 
