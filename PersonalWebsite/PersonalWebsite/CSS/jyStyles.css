@@ -528,11 +528,10 @@ a:hover {
 }
 
 .contentContainer {
-    display: table;
     vertical-align: central;
     margin-left: 50px;
     margin-top: 8%;
-    margin-right: 3%;
+    margin-right: 8%;
 }
 
 .leftContentContainer {
