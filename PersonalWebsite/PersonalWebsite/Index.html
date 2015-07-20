@@ -247,7 +247,7 @@
         </div>
 
         <div id="ProjectsSection" class="row hatch-background">
-            <div class="col-sm-12 section-content">
+            <div class="col-sm-12 section-content" style="padding:0;">
                 <div class="section-Header" style="margin-bottom:100px;">
                     <h1 class="section-Titles">PROJECTS</h1>
                     <h5 class="section-Subtitles">Phone and Web Clients • Backends</h5>
@@ -258,9 +258,12 @@
                         <div class="carouselBackground dark-accent-color"></div>
                         <div id="carouselContent">
                             <div class="carouselItem" id="GuruCarousel">
-                                <div class="picture">
-                                    <img src="/Images/Projects/GuruAlphaWithChassis.png" />
+                                <div class="pictureWrapper">
+                                    <div class="picture">
+                                        <img src="/Images/Projects/GuruAlphaWithChassis.png" />
+                                    </div>
                                 </div>
+
                                 <div class="contentContainer">
                                     <div class="content">
                                         <h1>Guru Alpha</h1>
@@ -288,7 +291,7 @@
                             <!--Ozwego-->
                             <div class="carouselItem" id="OzwegoCarousel">
                                 <div class="leftContentContainer">
-                                    <div class="content" style="width:50%">
+                                    <div id="OzwegoContent" class="content">
                                         <h1>Ozwego</h1>
                                         <p>
                                             Ozwego is a real-time multiplayer word game for the Windows Store 
@@ -303,10 +306,12 @@
                                         <p style="margin-top:15px;font-style:italic">Technologies: Windows Azure, TCP, XAML, C#</p>
                                     </div>
                                 </div>
-                                <div class="rightPicture">
-                                    <img src="/Images/Projects/Tablet_Ozwego_left_angle_1.png" width="100%" />
+                                <div class="leftPictureWrapper">
+                                    <div class="rightPicture">
+                                        <img src="/Images/Projects/Tablet_Ozwego_left_angle_1.png" width="100%" />
+                                    </div>
                                 </div>
-                                <div class="badges" style="bottom:7%">
+                                <div id="gitBadge" class="badges">
                                     <a target="_blank" href="https://github.com/jonathanyeung/ozwego">
                                         <img src="/Images/Projects/GitHub-Mark-Light-120px-plus.png" width="40" style="float:left;clear:both;" />
                                         <img src="/Images/Projects/GitHub_Logo.png" width="40" style="float:left;clear:both" />
@@ -316,8 +321,10 @@
 
                             <!--Point Reader-->
                             <div class="carouselItem" id="PointReaderCarousel">
-                                <div class="picture">
-                                    <img src="/Images/Projects/PointReaderWithChassis.png" width="300" />
+                                <div class="pictureWrapper">
+                                    <div class="picture">
+                                        <img src="/Images/Projects/PointReaderWithChassis.png" width="300" />
+                                    </div>
                                 </div>
                                 <div class="contentContainer">
                                     <div class="content">
@@ -353,7 +360,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="ContactSection" class="row  dark-accent-color">
             <div class="col-sm-12 section-content" style="margin-bottom:0px;">
