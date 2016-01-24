@@ -12,40 +12,36 @@
     $('#SkillsNavBarLi').click(function () {
         $('html, body').animate({
             scrollTop: document.getElementById('SkillsSection').offsetTop - stickyHeaderHeight
-        }, 1000);
+        }, { duration: 1000, queue: false });
     });
 
     $('#ExperienceNavBarLi').click(function () {
-        //document.getElementById('ExperienceSection').scrollIntoView();
         $('html, body').animate({
             scrollTop: document.getElementById('ExperienceSection').offsetTop - stickyHeaderHeight
-        }, 1000);
+        }, { duration: 1000, queue: false });
     });
 
     $('#projectsNavBarLi').click(function () {
         $('html, body').animate({
             scrollTop: document.getElementById('ProjectsSection').offsetTop - stickyHeaderHeight
-        }, 1000);
+        }, { duration: 1000, queue: false });
     });
 
     $('#contactNavBarLi').click(function () {
         $('html, body').animate({
             scrollTop: $(document).height()
-        }, 1000);
+        }, { duration: 1000, queue: false });
     });
 
     $("#check-me-out-button").click(function () {
         $('html, body').animate({
             scrollTop: document.getElementById('SkillsSection').offsetTop - stickyHeaderHeight
-        }, 1000);
+        }, { duration: 1000, queue: false });
     });
 
     carousel.initialize();
+
+    initializeNavBar();
+
+    // Add attributes 
 });
-
-
-
-$('#SkillsNavBarLi').removeClass("emphasized");
-$('#ExperienceNavBarLi').removeClass("emphasized");
-$('#projectsNavBarLi').removeClass("emphasized");
-$('#contactNavBarLi').removeClass("emphasized");
